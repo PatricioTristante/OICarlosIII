@@ -10,7 +10,13 @@ class Resultado_prueba extends Model
 {
     use HasFactory;
 
-
+    protected $fillable = [
+        'grupos_id',
+        'pruebas_id',
+        'puntos',
+        'tiempo',
+        'penalizacion',
+    ];
 
     protected $table = 'resultados_pruebas';
 

@@ -11,7 +11,12 @@ class User extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    protected $fillable = [
+        'ciclo_id',
+        'nombre',
+        'apellidos',
+    ];
+
 
     public function ciclos() : BelongsTo
     {

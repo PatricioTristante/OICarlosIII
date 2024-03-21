@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('categorias_ediciones', function (Blueprint $table) {
+        Schema::create('categorias_ediciones', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
             $table->unsignedBigInteger('edicion_id');
             $table->foreign('edicion_id')->references('id')->on('ediciones')->onDelete('cascade');
+            $table->unique(['categoria_id', 'edicion_id']);
+            $table->timestamps();
         });
     }
 
@@ -22,9 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('categorias_ediciones', function (Blueprint $table) {
-            $table->dropForeign('categorias_ediciones_edicion_id_foreign');
-            $table->dropColumn('edicion_id');
-        });
+        Schema::dropIfExists('categorias_ediciones');
     }
 };

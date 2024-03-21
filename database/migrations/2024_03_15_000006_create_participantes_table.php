@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('participantes', function (Blueprint $table) {
+        Schema::create('participantes', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('grupo_id');
             $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unique(['grupo_id', 'user_id']);
+            $table->timestamps();
         });
     }
 
@@ -24,11 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('participantes', function (Blueprint $table) {
-            $table->dropForeign('participantes_grupo_id_foreign');
-            $table->dropColumn('grupo_id');
-            $table->dropForeign('participantes_user_id_foreign');
-            $table->dropColumn('user_id');
-        });
+        Schema::dropIfExists('participantes');
     }
 };

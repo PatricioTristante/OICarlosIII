@@ -11,6 +11,11 @@ class Categoria extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nombre',
+        'grado_id',
+    ];
+
     public function grupos() : HasMany
     {
         return $this->hasMany(Grupo::class);

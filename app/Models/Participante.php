@@ -10,6 +10,11 @@ class Participante extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'grupos_id',
+    ];
+
     public function users() : BelongsTo
     {
         return $this->belongsTo(User::class);

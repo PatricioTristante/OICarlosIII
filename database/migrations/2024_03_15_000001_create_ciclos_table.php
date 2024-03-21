@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->char('codigo', 6);
             $table->string('nombre', 100);
+            $table->unsignedBigInteger('grado_id');
+            $table->foreign('grado_id')->references('id')->on('grados')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

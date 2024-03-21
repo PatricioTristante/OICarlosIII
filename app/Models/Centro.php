@@ -10,6 +10,18 @@ class Centro extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'codcen',
+        'dencen',
+        'titularidad',
+        'domcen',
+        'cpcen',
+        'loccen',
+        'muncen',
+        'telcen',
+        'email',
+    ];
+
     public function grupos() : HasMany
     {
         return $this->hasMany(Grupo::class);

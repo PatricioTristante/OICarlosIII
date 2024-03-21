@@ -12,6 +12,16 @@ class Edicion extends Model
 
     protected $table = 'ediciones';
 
+    protected $fillable = [
+        'curso_escolar',
+        'num_olicmpiada',
+        'num_modding',
+        'fecha_celebracion',
+        'fecha_apertura',
+        'fecha_cierre',
+        'css_file',
+    ];
+
     public function categorias_ediciones() : HasMany
     {
         return $this->hasMany(Categorias_edicion::class);

@@ -20,6 +20,8 @@ return new class extends Migration
             $table->integer('puntos');
             $table->timestamp('tiempo');
             $table->time('penalizacion');
+            $table->unique(['grupo_id', 'prueba_id']);
+            $table->timestamps();
         });
     }
 
