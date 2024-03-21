@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('ciclos', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
+            $table->id();
+            $table->char('nombre', 50);
             $table->unsignedBigInteger('grado_id');
             $table->foreign('grado_id')->references('id')->on('grados')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -22,9 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('ciclos', function (Blueprint $table) {
-            $table->dropForeign('ciclos_grado_id_foreign');
-            $table->dropColumn('grado_id');
-        });
+        Schema::dropIfExists('categorias');
     }
 };

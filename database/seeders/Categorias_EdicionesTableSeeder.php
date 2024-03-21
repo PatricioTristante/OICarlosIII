@@ -14,12 +14,26 @@ class Categorias_EdicionesTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('categorias_ediciones')->truncate();
-        $max_ediciones_id = DB::table('ediciones')->max('id');
-        $max_categorias_id = (int)DB::table('categorias')->max('id');
-        for ($i=0; $i < 10; $i++) {
-            $categoria_edicion = ['categoria_id' => rand(1, $max_categorias_id)
-            , 'edicion_id' => rand(1, $max_ediciones_id)];
-            DB::table('categorias_ediciones')->insert($categoria_edicion);
+
+        $categoriasCount = DB::table('categorias')->count();
+        $edicionesCount = DB::table('ediciones')->count();
+
+        // Lista de combinaciones ya insertadas
+        $insertedCombinations = [];
+
+        for ($i = 0; $i < 10; $i++) {
+            do {
+                $categoria_id = rand(1, $categoriasCount);
+                $edicion_id = rand(1, $edicionesCount);
+                $combination = $categoria_id . '-' . $edicion_id;
+            } while (in_array($combination, $insertedCombinations));
+
+            $insertedCombinations[] = $combination;
+
+            DB::table('categorias_ediciones')->insert([
+                'categoria_id' => $categoria_id,
+                'edicion_id' => $edicion_id,
+            ]);
         }
     }
 }

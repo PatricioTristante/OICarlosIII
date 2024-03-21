@@ -11,6 +11,12 @@ class Prueba extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nombre',
+        'categorias_ediciones_id',
+        'patrocinadores_id',
+    ];
+
     public function resultados_pruebas() : HasMany
     {
         return $this->hasMany(Resultado_prueba::class);

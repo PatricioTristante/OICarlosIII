@@ -20,8 +20,9 @@ return new class extends Migration
             $table->integer('cpcen');
             $table->string('loccen', 50);
             $table->string('muncen', 50);
-            $table->string('telcen', 20);
-            $table->string('email', 100);
+            $table->string('telcen', 20)->nullable();
+            $table->string('email', 100)->nullable();
+            $table->timestamps();
         });
     }
 

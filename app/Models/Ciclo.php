@@ -11,6 +11,12 @@ class Ciclo extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'codigo',
+        'nombre',
+        'grado_id',
+    ];
+
     public function grados() : BelongsTo
     {
         return $this->belongsTo(Grado::class);

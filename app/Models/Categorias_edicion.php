@@ -13,6 +13,11 @@ class Categorias_edicion extends Model
 
     protected $table = 'categorias_ediciones';
 
+    protected $fillable = [
+        'categorias_id',
+        'edicion_id',
+    ];
+
     public function pruebas() : HasMany
     {
         return $this->hasMany(Prueba::class, 'categorias_ediciones_id');

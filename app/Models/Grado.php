@@ -10,6 +10,10 @@ class Grado extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nombre',
+    ];
+
     public function ciclos() : HasMany
     {
         return $this->hasMany(Ciclo::class);

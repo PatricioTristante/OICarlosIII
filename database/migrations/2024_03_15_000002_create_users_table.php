@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categorias_ediciones', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->unsignedBigInteger('ciclo_id');
+            $table->foreign('ciclo_id')->references('id')->on('ciclos')->onDelete('cascade');
+            $table->string('nombre', 255);
+            $table->string('apellidos', 255);
+            $table->timestamps();
         });
     }
 
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categorias_ediciones');
+        Schema::dropIfExists('users');
     }
 };

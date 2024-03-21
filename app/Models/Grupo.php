@@ -11,6 +11,13 @@ class Grupo extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nombre',
+        'tutor',
+        'centros_id',
+        'categorias_id',
+    ];
+
     public function users() : BelongsTo
     {
         return $this->belongsTo(User::class);
