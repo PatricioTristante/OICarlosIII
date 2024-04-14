@@ -3,7 +3,10 @@
 Template Name: Plantilla base
 */
 ?>
-
+<?php
+	require_once('wp-config.php');
+	global $wpdb;
+?>
 <?php get_header(); ?>
 
 <!-- Header -->
@@ -85,20 +88,58 @@ Template Name: Plantilla base
 							</section>
 
 						<!-- Three -->
+							<?php
+								$bloque3 = get_field('bloque3');
+								$ciclos = "ciclos";
+								$resultados = $wpdb->get_results("SELECT * FROM $ciclos");
+								$categorias = "categorias";
+								$resultados2 = $wpdb->get_results("SELECT * FROM $categorias");
+							?>
 							<section id="three">
 								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
+									<h3><?= $bloque3['titulo'] ?></h3>
+									<p><?= $bloque3['texto'] ?></p>
+									<form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+										<input type="hidden" name="action" value="manejar_formulario">
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="nombre" id="nombre" placeholder="Nombre*" required/></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="apellidos" id="apellidos" placeholder="Apellidos*" required/></div>
+											<div class="col-12">
+												<input type="email" name="email" id="email" placeholder="Correo Electronico*" required>
+											</div>
+											<?php if($resultados) :?>
+												<div class="col-6 col-12-xsmall">
+													<select name="ciclo" id="ciclo" required>
+														<option value="" default>- Selecciona un ciclo -</option>
+														<?php foreach($resultados as $ciclo) :?>
+															<option value="<?= $ciclo->id ?>"><?= $ciclo->codigo ?></option>
+														<?php endforeach; ?>
+													</select>
+												</div>
+											<?php endif; ?>
+											
+											<div class="col-6 col-12-xsmall">
+												<select name="curso" id="curso" required>
+													<option value="" default>- Selecciona un curso -</option>
+													<option value="1">1º</option>
+													<option value="2">2º</option>
+												</select>
+											</div>
+											<?php if($resultados2) :?>
+												<div class="col-12">
+													<select name="categoria" id="categoria" required>
+														<option value="" default>- Selecciona una categoria -</option>
+														<?php foreach($resultados2 as $categoria) :?>
+															<option value="<?= $categoria->id ?>"><?= $categoria->nombre ?></option>
+														<?php endforeach; ?>
+													</select>
+												</div>
+											<?php endif; ?>
+
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
+													<li><input type="submit" class="primary" value="Enviar Inscripcion" /></li>
+													<li><input type="reset" value="Reiniciar Formulario" /></li>
 												</ul>
 											</div>
 										</div>

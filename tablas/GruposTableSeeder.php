@@ -57,7 +57,26 @@ class GruposTableSeeder {
                     'centro_id' => 7,
                     'categoria_id' => 1,
                 ],
+                [
+                    'nombre' => 'Grupo H',
+                    'tutor' => 8,
+                    'centro_id' => 8,
+                    'categoria_id' => 1,
+                ],
+                [
+                    'nombre' => 'Grupo I',
+                    'tutor' => 9,
+                    'centro_id' => 9,
+                    'categoria_id' => 1,
+                ],
+                [
+                    'nombre' => 'Grupo J',
+                    'tutor' => 10,
+                    'centro_id' => 10,
+                    'categoria_id' => 1,
+                ],
             ];
+            
     
 
             foreach ($grupos as $grupo) {

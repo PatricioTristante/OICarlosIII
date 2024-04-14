@@ -4,6 +4,7 @@ require_once('wp-config.php');
 require_once('wp-load.php');
 if(current_user_can('administrator')){
     $tablas = array(
+        "inscripciones",
         "resultados_pruebas",
         "pruebas",
         "categorias_ediciones",
@@ -146,6 +147,19 @@ if(current_user_can('administrator')){
                 penalizacion TIME,
                 FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE CASCADE,
                 FOREIGN KEY (prueba_id) REFERENCES pruebas(id) ON DELETE CASCADE
+            )
+        ",
+        "inscripciones" => "
+            CREATE TABLE IF NOT EXISTS inscripciones (
+                id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                nombre VARCHAR(100) NOT NULL,
+                apellidos VARCHAR(100) NOT NULL,
+                email VARCHAR(100) NOT NULL,
+                ciclo_id BIGINT,
+                curso INT,
+                categoria_id BIGINT,
+                FOREIGN KEY (ciclo_id) REFERENCES ciclos(id) ON DELETE CASCADE,
+                FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
             )
         "
     );

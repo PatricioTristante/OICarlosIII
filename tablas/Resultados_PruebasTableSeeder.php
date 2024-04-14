@@ -84,6 +84,7 @@ class Resultados_PruebasTableSeeder {
                     'penalizacion' => '00:50:00',
                 ],
             ];
+            
 
                 foreach ($resultados_pruebas as $resultados_prueba) {
                     // Inserta los datos en la tabla 'grados'
