@@ -159,7 +159,11 @@ Template Name: Plantilla base
 												if(count($patrocinadores) <= 3):?>
 													<?php foreach($patrocinadores as $patrocinador):?>
 														<article>
-															<img src="<?= get_template_directory_uri() ?>/images/patrocinadores/<?= $patrocinador->logotipo ?>" class="image" alt="" />
+															<?php if(filter_var($patrocinador->logotipo, FILTER_VALIDATE_URL)): ?>
+																<img src="<?= $patrocinador->logotipo ?>" class="image" alt="" />
+															<?php else: ?>
+																<img src="<?= get_template_directory_uri() ?>/images/patrocinadores/<?= $patrocinador->logotipo ?>" class="image" alt="" />ç
+															<?php endif; ?>
 															<div class="inner">
 																<h4><?= $patrocinador->nombre ?></h4>
 															</div>
@@ -170,7 +174,11 @@ Template Name: Plantilla base
 														<div class="swiper-wrapper mi_swiper_wrapper">
 														<?php foreach($patrocinadores as $patrocinador):?>
 															<div class="swiper-slide">
-																<img src="<?= get_template_directory_uri() ?>/images/patrocinadores/<?= $patrocinador->logotipo ?>" class="image logo" alt="" />
+																<?php if(filter_var($patrocinador->logotipo, FILTER_VALIDATE_URL)): ?>
+																	<img src="<?= $patrocinador->logotipo ?>" class="image logo" alt="" />
+																<?php else: ?>
+																	<img src="<?= get_template_directory_uri() ?>/images/patrocinadores/<?= $patrocinador->logotipo ?>" class="image logo" alt="" />
+																<?php endif; ?>
 																<div class="inner">
 																	<h4 class="centrar-texto"><?= $patrocinador->nombre ?></h4>
 																</div>
