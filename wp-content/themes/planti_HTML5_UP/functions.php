@@ -9,6 +9,7 @@ function add_CSS() {
    }
    $css_file = $ediciones[0]->css_file;
    wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/' . $css_file);
+   wp_enqueue_style( 'style2', get_template_directory_uri() . '/style.css');
 }
 
 // Esta funcion carga el banner de la pagina desde la base de datos

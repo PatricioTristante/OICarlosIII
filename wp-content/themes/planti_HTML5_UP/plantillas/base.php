@@ -102,46 +102,38 @@ Template Name: Plantilla base
 									<form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
 										<input type="hidden" name="action" value="manejar_formulario">
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="nombre" id="nombre" placeholder="Nombre*" required/></div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="apellidos" id="apellidos" placeholder="Apellidos*" required/></div>
+											<div class="col-12"><input type="checkbox" name="terminos" id="terminos" required><label for="terminos">Hemos leido y aceptado las bases</label></div>
 											<div class="col-12">
-												<input type="email" name="email" id="email" placeholder="Correo Electronico*" required>
+												<input type="text" name="centro" id="centro" placeholder="Centro*" required>
 											</div>
-											<?php if($resultados) :?>
-												<div class="col-6 col-12-xsmall">
-													<select name="ciclo" id="ciclo" required>
-														<option value="" default>- Selecciona un ciclo -</option>
-														<?php foreach($resultados as $ciclo) :?>
-															<option value="<?= $ciclo->id ?>"><?= $ciclo->codigo ?></option>
-														<?php endforeach; ?>
-													</select>
-												</div>
-											<?php endif; ?>
+											<div class="col-12">
+												<input type="text" name="prof_resp" id="prof_resp" placeholder="Profesor responsable*" required/>
+											</div>
+											<div class="col-12">
+												<input type="email" name="email_prof_resp" id="email_prof_resp" placeholder="Email Profesor responsable*" required/>
+											</div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="nombre1" id="nombre1" placeholder="Nombre Alumno 1*" required/></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="dni1" id="dni1" placeholder="DNI Alumno 1*" required/></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="nombre2" id="nombre2" placeholder="Nombre Alumno 2"/></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="dni2" id="dni2" placeholder="DNI Alumno 2"/></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="nombre3" id="nombre3" placeholder="Nombre Alumno 3"/></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="dni3" id="dni3" placeholder="DNI Alumno 3"/></div>
 											
-											<div class="col-6 col-12-xsmall">
-												<select name="curso" id="curso" required>
-													<option value="" default>- Selecciona un curso -</option>
-													<option value="1">1º</option>
-													<option value="2">2º</option>
+											<div class="col-12">
+												<select name="participacion" id="participacion" required>
+													<option value="" default>- Selecciona la competición en la que participará el grupo/alumno -</option>
+													<option value="grado_medio">Grado Medio</option>
+													<option value="grado_superior">Grado Superior</option>
 												</select>
 											</div>
-											<?php if($resultados2) :?>
-												<div class="col-12">
-													<select name="categoria" id="categoria" required>
-														<option value="" default>- Selecciona una categoria -</option>
-														<?php foreach($resultados2 as $categoria) :?>
-															<option value="<?= $categoria->id ?>"><?= $categoria->nombre ?></option>
-														<?php endforeach; ?>
-													</select>
-												</div>
-											<?php endif; ?>
-
+											
 											<div class="col-12">
 												<ul class="actions">
 													<li><input type="submit" class="primary" value="Enviar Inscripcion" /></li>
 													<li><input type="reset" value="Reiniciar Formulario" /></li>
 												</ul>
 											</div>
+											<span>(Los campos con * son obligatorios)</span>
 										</div>
 									</form>
 								</div>
@@ -153,33 +145,48 @@ Template Name: Plantilla base
 							</section>
 
 						<!-- Five -->
-							
+							<?php
+								$bloque4 = get_field('bloque4');
+							?>
 							<section id="five">
 								<div class="container">
-									<h3>A Few Accomplishments</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<h3><?= $bloque4['titulo'] ?></h3>
+									<p><?= $bloque4['texto'] ?></p>
 									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="<?= get_template_directory_uri() ?>/images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Possibly broke spacetime</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="<?= get_template_directory_uri() ?>/images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="<?= get_template_directory_uri() ?>/images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
+										<?php
+										$patrocinadores = $wpdb->get_results("SELECT * FROM patrocinadores");
+											if($patrocinadores):
+												if(count($patrocinadores) <= 3):?>
+													<?php foreach($patrocinadores as $patrocinador):?>
+														<article>
+															<img src="<?= get_template_directory_uri() ?>/images/patrocinadores/<?= $patrocinador->logotipo ?>" class="image" alt="" />
+															<div class="inner">
+																<h4><?= $patrocinador->nombre ?></h4>
+															</div>
+														</article>
+													<?php endforeach; ?>
+												<?php else: ?>
+													<div class="swiper">
+														<div class="swiper-wrapper mi_swiper_wrapper">
+														<?php foreach($patrocinadores as $patrocinador):?>
+															<div class="swiper-slide">
+																<img src="<?= get_template_directory_uri() ?>/images/patrocinadores/<?= $patrocinador->logotipo ?>" class="image logo" alt="" />
+																<div class="inner">
+																	<h4 class="centrar-texto"><?= $patrocinador->nombre ?></h4>
+																</div>
+															</div>
+														<?php endforeach; ?>
+														</div>
+														<div class="swiper-pagination"></div>
+    													<div class="autoplay-progress">
+    													  <svg viewBox="0 0 48 48">
+    													    <circle cx="24" cy="24" r="20"></circle>
+    													  </svg>
+    													  <span></span>
+    													</div>
+													</div>
+												<?php endif; ?>
+											<?php endif; ?>
 									</div>
 								</div>
 							</section>

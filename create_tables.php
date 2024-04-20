@@ -76,7 +76,7 @@ if(current_user_can('administrator')){
                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
                 nombre CHAR(50),
                 grado_id BIGINT,
-                FOREIGN KEY (grado_id) REFERENCES grados(id) ON DELETE CASCADE
+                FOREIGN KEY (grado_id) REFERENCES grados(id) ON DELETE SET NULL ON UPDATE CASCADE
             )
         ", 
         "ciclos" =>  "
@@ -94,7 +94,7 @@ if(current_user_can('administrator')){
                 ciclo_id BIGINT,
                 nombre VARCHAR(255),
                 apellidos VARCHAR(255),
-                FOREIGN KEY (ciclo_id) REFERENCES ciclos(id) ON DELETE CASCADE
+                FOREIGN KEY (ciclo_id) REFERENCES ciclos(id) ON DELETE SET NULL ON UPDATE CASCADE
             )
         ", 
         "grupos" => "
@@ -104,19 +104,19 @@ if(current_user_can('administrator')){
                 tutor BIGINT,
                 centro_id BIGINT,
                 categoria_id BIGINT,
-                FOREIGN KEY (tutor) REFERENCES users(id) ON DELETE CASCADE,
-                FOREIGN KEY (centro_id) REFERENCES centros(id) ON DELETE CASCADE,
-                FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
+                FOREIGN KEY (tutor) REFERENCES users(id) ON DELETE SET NULL ON UPDATE CASCADE,
+                FOREIGN KEY (centro_id) REFERENCES centros(id) ON DELETE SET NULL ON UPDATE CASCADE,
+                FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE SET NULL ON UPDATE CASCADE
             )
         ", 
         "participantes" => "
             CREATE TABLE IF NOT EXISTS participantes (
-                id BIGINT AUTO_INCREMENT PRIMARY KEY,
                 grupo_id BIGINT,
                 user_id BIGINT,
+                PRIMARY KEY (grupo_id, user_id),
                 FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE CASCADE,
                 FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-            )
+            ) 
         ", 
         "categorias_ediciones" => "
             CREATE TABLE IF NOT EXISTS categorias_ediciones (
@@ -134,7 +134,7 @@ if(current_user_can('administrator')){
                 categorias_ediciones_id BIGINT,
                 patrocinadores_id BIGINT,
                 FOREIGN KEY (categorias_ediciones_id) REFERENCES categorias_ediciones(id) ON DELETE CASCADE,
-                FOREIGN KEY (patrocinadores_id) REFERENCES patrocinadores(id) ON DELETE CASCADE
+                FOREIGN KEY (patrocinadores_id) REFERENCES patrocinadores(id) ON DELETE SET NULL ON UPDATE CASCADE
             )
         ", 
         "resultados_pruebas" => "
@@ -145,21 +145,23 @@ if(current_user_can('administrator')){
                 puntos INT,
                 tiempo TIMESTAMP,
                 penalizacion TIME,
-                FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE CASCADE,
+                FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE SET NULL ON UPDATE CASCADE,
                 FOREIGN KEY (prueba_id) REFERENCES pruebas(id) ON DELETE CASCADE
             )
         ",
         "inscripciones" => "
             CREATE TABLE IF NOT EXISTS inscripciones (
                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                nombre VARCHAR(100) NOT NULL,
-                apellidos VARCHAR(100) NOT NULL,
-                email VARCHAR(100) NOT NULL,
-                ciclo_id BIGINT,
-                curso INT,
-                categoria_id BIGINT,
-                FOREIGN KEY (ciclo_id) REFERENCES ciclos(id) ON DELETE CASCADE,
-                FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
+                nombre1 VARCHAR(255) NOT NULL,
+                dni1 VARCHAR(10) NOT NULL,
+                nombre2 VARCHAR(255),
+                dni2 VARCHAR(10),
+                nombre3 VARCHAR(255),
+                dni3 VARCHAR(10),
+                centro VARCHAR(255) NOT NULL,
+                prof_resp VARCHAR(255) NOT NULL,
+                email_prof_resp VARCHAR(255) NOT NULL,
+                participacion ENUM('grado_medio', 'grado_superior') NOT NULL
             )
         "
     );
@@ -188,4 +190,8 @@ echo "<br>";
 echo "Pulse aqui para volver a la pagina de inicio";
 echo "<br>";
 echo "<a href='/'>Inicio</a>";
+echo "<br>";
+echo "pulsa aqui para volver a wp-admin";
+echo "<br>";
+echo "<a href='/wp-admin'>wp-admin</a>";
 ?>

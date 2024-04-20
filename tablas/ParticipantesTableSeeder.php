@@ -13,6 +13,8 @@ class ParticipantesTableSeeder {
 
             $wpdb->query("ALTER TABLE participantes AUTO_INCREMENT = 1");
 
+            $grupoInicial = 1;
+
 
             $participantes = [
                 [

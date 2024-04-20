@@ -52,5 +52,8 @@ echo "<br>";
 echo "Pulse aqui para volver a la pagina de inicio";
 echo "<br>";
 echo "<a href='/'>Inicio</a>";
-
+echo "<br>";
+echo "pulsa aqui para volver a wp-admin";
+echo "<br>";
+echo "<a href='/wp-admin'>wp-admin</a>";
 ?>
