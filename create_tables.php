@@ -4,7 +4,6 @@ require_once('wp-config.php');
 require_once('wp-load.php');
 if(current_user_can('administrator')){
     $tablas = array(
-        "inscripciones",
         "resultados_pruebas",
         "pruebas",
         "categorias_ediciones",
@@ -94,6 +93,7 @@ if(current_user_can('administrator')){
                 ciclo_id BIGINT,
                 nombre VARCHAR(255),
                 apellidos VARCHAR(255),
+                identificacion VARCHAR(10),
                 FOREIGN KEY (ciclo_id) REFERENCES ciclos(id) ON DELETE SET NULL ON UPDATE CASCADE
             )
         ", 
@@ -148,23 +148,14 @@ if(current_user_can('administrator')){
                 FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE SET NULL ON UPDATE CASCADE,
                 FOREIGN KEY (prueba_id) REFERENCES pruebas(id) ON DELETE CASCADE
             )
-        ",
-        "inscripciones" => "
-            CREATE TABLE IF NOT EXISTS inscripciones (
-                id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                nombre1 VARCHAR(255) NOT NULL,
-                dni1 VARCHAR(10) NOT NULL,
-                nombre2 VARCHAR(255),
-                dni2 VARCHAR(10),
-                nombre3 VARCHAR(255),
-                dni3 VARCHAR(10),
-                centro VARCHAR(255) NOT NULL,
-                prof_resp VARCHAR(255) NOT NULL,
-                email_prof_resp VARCHAR(255) NOT NULL,
-                participacion ENUM('grado_medio', 'grado_superior') NOT NULL
-            )
         "
     );
+    require_once('./tablas/CentrosTableSeeder.php');
+    require_once('./tablas/GradosTableSeeder.php');
+    require_once('./tablas/CiclosTableSeeder.php');
+    $centros = new CentrosTableSeeder();
+    $grados = new GradosTableSeeder();
+    $ciclos = new CiclosTableSeeder();
 
 
     // Ejecuta la consulta SQL para crear la tabla
@@ -178,20 +169,44 @@ if(current_user_can('administrator')){
             echo "<br>";
         }
     }
+    $centros->run();
+    $grados->run();
+    $ciclos->run();
+    $edicion = [
+        'curso_escolar' => '2023-2024',
+        'num_olimpiada' => 11,
+        'num_modding' => 11,
+        'fecha_celebracion' => '2024-05-20',
+        'fecha_apertura' => '2024-04-01',
+        'fecha_cierre' => '2024-05-10',
+        'css_file' => 'edicion_11.css',
+        'banner' => 'banner_11.jpg',
+    ];
+    $wpdb->insert(
+        "ediciones",
+        $edicion
+    );
+    echo "Edicion 2023-2024 se ha insertado correctamente.";
+    echo "<br>";
+    echo "<br>";
+    echo "Pulse aqui para volver a la pagina de bases de datos";
+    echo "<br>";
+    echo "<a href='/base-datos'>Bases de datos</a>";
+    echo "<br>";
+    echo "Pulse aqui para volver a la pagina de inicio";
+    echo "<br>";
+    echo "<a href='/'>Inicio</a>";
+    echo "<br>";
+    echo "pulsa aqui para volver a wp-admin";
+    echo "<br>";
+    echo "<a href='/wp-admin'>wp-admin</a>";
 }
 else{
     echo "No tienes permisos para ejecutar este script";
+    echo "<br>";
+    echo "Pulse aqui para volver a la pagina de inicio";
+    echo "<br>";
+    echo "<a href='/'>Inicio</a>";
 }
-echo "<br>";
-echo "Pulse aqui para volver a la pagina de bases de datos";
-echo "<br>";
-echo "<a href='/base-datos'>Bases de datos</a>";
-echo "<br>";
-echo "Pulse aqui para volver a la pagina de inicio";
-echo "<br>";
-echo "<a href='/'>Inicio</a>";
-echo "<br>";
-echo "pulsa aqui para volver a wp-admin";
-echo "<br>";
-echo "<a href='/wp-admin'>wp-admin</a>";
+
 ?>

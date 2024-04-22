@@ -110,7 +110,7 @@ Template Name: Plantilla base
 												<input type="text" name="prof_resp" id="prof_resp" placeholder="Profesor responsable*" required/>
 											</div>
 											<div class="col-12">
-												<input type="email" name="email_prof_resp" id="email_prof_resp" placeholder="Email Profesor responsable*" required/>
+												<input type="text" name="grupo" id="grupo" placeholder="Nombre del grupo*" required/>
 											</div>
 											<div class="col-6 col-12-xsmall"><input type="text" name="nombre1" id="nombre1" placeholder="Nombre Alumno 1*" required/></div>
 											<div class="col-6 col-12-xsmall"><input type="text" name="dni1" id="dni1" placeholder="DNI Alumno 1*" required/></div>
@@ -118,12 +118,27 @@ Template Name: Plantilla base
 											<div class="col-6 col-12-xsmall"><input type="text" name="dni2" id="dni2" placeholder="DNI Alumno 2"/></div>
 											<div class="col-6 col-12-xsmall"><input type="text" name="nombre3" id="nombre3" placeholder="Nombre Alumno 3"/></div>
 											<div class="col-6 col-12-xsmall"><input type="text" name="dni3" id="dni3" placeholder="DNI Alumno 3"/></div>
-											
+											<?php
+												$ciclos = $wpdb->get_results("SELECT * FROM ciclos");
+											?>
 											<div class="col-12">
-												<select name="participacion" id="participacion" required>
-													<option value="" default>- Selecciona la competición en la que participará el grupo/alumno -</option>
-													<option value="grado_medio">Grado Medio</option>
-													<option value="grado_superior">Grado Superior</option>
+												<select name="ciclo" id="ciclo" required>
+													<option value="" default>- Selecciona la formacion profesional del grupo/alumno -</option>
+													<?php foreach($ciclos as $ciclo):?>
+														<option value="<?= $ciclo->id ?>"><?= $ciclo->nombre ?></option>
+													<?php endforeach; ?>
+												</select>
+											</div>
+
+											<?php
+												$categorias = $wpdb->get_results("SELECT * FROM categorias");
+											?>
+											<div class="col-12">
+												<select name="categoria" id="categoria" required>
+													<option value="" default>- Selecciona la categoria en la que participará el grupo/alumno -</option>
+													<?php foreach($categorias as $categoria):?>
+														<option value="<?= $categoria->id ?>"><?= $categoria->nombre ?></option>
+													<?php endforeach; ?>
 												</select>
 											</div>
 											
