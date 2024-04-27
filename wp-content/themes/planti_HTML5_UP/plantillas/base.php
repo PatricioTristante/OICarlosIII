@@ -104,10 +104,21 @@ Template Name: Plantilla base
 										<div class="row gtr-uniform">
 											<div class="col-12"><input type="checkbox" name="terminos" id="terminos" required><label for="terminos">Hemos leido y aceptado las bases</label></div>
 											<div class="col-12">
-												<input type="text" name="centro" id="centro" placeholder="Centro*" required>
+												<?php
+													$centros = $wpdb->get_results("SELECT * FROM centros");
+												?>
+												<select name="centro" id="centro" class="js-example-basic-single" required>
+													<option value="" default>- Selecciona tu centro -</option>
+													<?php foreach($centros as $centro):?>
+														<option value="<?= $centro->id ?>"><?= $centro->dencen ?></option>
+													<?php endforeach; ?>
+												</select>
 											</div>
 											<div class="col-12">
 												<input type="text" name="prof_resp" id="prof_resp" placeholder="Profesor responsable*" required/>
+											</div>
+											<div class="col-12">
+												<input type="text" name="email_prof_resp" id="email_prof_resp" placeholder="Correo Profesor responsable*" required/>
 											</div>
 											<div class="col-12">
 												<input type="text" name="grupo" id="grupo" placeholder="Nombre del grupo*" required/>
@@ -125,19 +136,21 @@ Template Name: Plantilla base
 												<select name="ciclo" id="ciclo" required>
 													<option value="" default>- Selecciona la formacion profesional del grupo/alumno -</option>
 													<?php foreach($ciclos as $ciclo):?>
-														<option value="<?= $ciclo->id ?>"><?= $ciclo->nombre ?></option>
+														<option value="<?= $ciclo->id ?>" class="<?= $ciclo->grado_id ?>"><?= $ciclo->nombre ?></option>
 													<?php endforeach; ?>
 												</select>
 											</div>
+											
+											
 
 											<?php
 												$categorias = $wpdb->get_results("SELECT * FROM categorias");
 											?>
 											<div class="col-12">
-												<select name="categoria" id="categoria" required>
+												<select name="categoria" id="categoria" disabled required>
 													<option value="" default>- Selecciona la categoria en la que participará el grupo/alumno -</option>
 													<?php foreach($categorias as $categoria):?>
-														<option value="<?= $categoria->id ?>"><?= $categoria->nombre ?></option>
+														<option value="<?= $categoria->id ?>" class="<?= $categoria->grado_id ?>"><?= $categoria->nombre ?></option>
 													<?php endforeach; ?>
 												</select>
 											</div>
@@ -153,6 +166,7 @@ Template Name: Plantilla base
 									</form>
 								</div>
 							</section>
+
 
 						<!-- Four -->
 							<section id="four">

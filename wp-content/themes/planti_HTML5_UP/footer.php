@@ -1,3 +1,4 @@
+<?php wp_footer(); ?>
 <section id="footer">
   <div class="container">
     <ul class="copyright">
@@ -8,7 +9,7 @@
 </section>
 
 </div>
-<?php wp_footer(); ?>
+
       <?php 
       $scripts = array(
         'jquery' => 'assets/js/jquery.min.js',
@@ -22,6 +23,9 @@
       foreach ($scripts as $nombre => $script) : ?>
         <script src="<?php echo get_template_directory_uri() . '/' . $script; ?>"></script>
       <?php endforeach; ?>
+    
+    
+
 </body>
 
 </html>

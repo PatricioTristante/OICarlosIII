@@ -94,6 +94,7 @@ if(current_user_can('administrator')){
                 nombre VARCHAR(255),
                 apellidos VARCHAR(255),
                 identificacion VARCHAR(10),
+                email VARCHAR(100),
                 FOREIGN KEY (ciclo_id) REFERENCES ciclos(id) ON DELETE SET NULL ON UPDATE CASCADE
             )
         ", 
@@ -148,14 +149,25 @@ if(current_user_can('administrator')){
                 FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE SET NULL ON UPDATE CASCADE,
                 FOREIGN KEY (prueba_id) REFERENCES pruebas(id) ON DELETE CASCADE
             )
+        ",
+        "errores_inscripcion" => 
+        "
+            CREATE TABLE IF NOT EXISTS errores_inscripcion (
+                id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                grupo_id BIGINT,
+                error VARCHAR(255),
+                FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE CASCADE
+            )
         "
     );
     require_once('./tablas/CentrosTableSeeder.php');
     require_once('./tablas/GradosTableSeeder.php');
     require_once('./tablas/CiclosTableSeeder.php');
+    require_once('./tablas/CategoriasTableSeeder.php');
     $centros = new CentrosTableSeeder();
     $grados = new GradosTableSeeder();
     $ciclos = new CiclosTableSeeder();
+    $categorias = new CategoriasTableSeeder();
 
 
     // Ejecuta la consulta SQL para crear la tabla
@@ -172,6 +184,7 @@ if(current_user_can('administrator')){
     $centros->run();
     $grados->run();
     $ciclos->run();
+    $categorias->run();
     $edicion = [
         'curso_escolar' => '2023-2024',
         'num_olimpiada' => 11,

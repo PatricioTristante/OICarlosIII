@@ -17,8 +17,10 @@ Template Name: Plantilla Envio
             ?>
             <div>
                 <h3><?= $texto ?></h3>
+                <?php if(isset($_GET['advertencia'])): ?>
+                    <p><?= $_GET['advertencia'] ?>, por favor, contacte con el administrador para solucionarlo</p>
+                <?php endif; ?>
             </div>
 
-            <!-- TODO Hacer que redirija a home -->
 
 <?php get_footer(); ?>

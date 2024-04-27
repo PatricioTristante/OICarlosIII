@@ -15,9 +15,9 @@ class CiclosTableSeeder {
 
 
             $ciclos = [
-                ['codigo' => 'DAW', 'nombre' => 'Desarrollo de aplicaciones web', 'grado_id' => 1],
-                ['codigo' => 'DAM', 'nombre' => 'Desarrollo de aplicaciones Multiplataforma', 'grado_id' => 1],
-                ['codigo' => 'ASIR', 'nombre' => 'Administracion de sistemas informaticos en red', 'grado_id' => 1],
+                ['codigo' => 'DAW', 'nombre' => 'Desarrollo de aplicaciones web', 'grado_id' => 2],
+                ['codigo' => 'DAM', 'nombre' => 'Desarrollo de aplicaciones Multiplataforma', 'grado_id' => 2],
+                ['codigo' => 'ASIR', 'nombre' => 'Administracion de sistemas informaticos en red', 'grado_id' => 2],
                 ['codigo' => 'SMR', 'nombre' => 'Sistemas microinformaticos y redes', 'grado_id' => 1]
             ];
     
