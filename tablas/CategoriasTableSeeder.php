@@ -15,20 +15,7 @@ class CategoriasTableSeeder {
             $wpdb->query("ALTER TABLE categorias AUTO_INCREMENT = 1");
 
 
-            $categorias = [
-                [
-                    'nombre' => 'Modding',
-                    'grado_id' => 2,
-                ],
-                [
-                    'nombre' => 'Grado Medio',
-                    'grado_id' => 1,
-                ],
-                [
-                    'nombre' => 'Grado Superior',
-                    'grado_id' => 2,
-                ]
-            ];
+            $categorias = [];
 
             foreach ($categorias as $categoria) {
                 $wpdb->insert(

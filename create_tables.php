@@ -4,6 +4,7 @@ require_once('wp-config.php');
 require_once('wp-load.php');
 if(current_user_can('administrator')){
     $tablas = array(
+        "errores_inscripcion",
         "resultados_pruebas",
         "pruebas",
         "categorias_ediciones",
@@ -33,7 +34,7 @@ if(current_user_can('administrator')){
         "grados" =>"
             CREATE TABLE IF NOT EXISTS grados (
                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                nombre VARCHAR(20)
+                nombre VARCHAR(50)
             )
         ", 
         "centros" => "
@@ -54,8 +55,9 @@ if(current_user_can('administrator')){
             CREATE TABLE IF NOT EXISTS ediciones (
                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
                 curso_escolar CHAR(10),
-                num_olimpiada SMALLINT,
-                num_modding SMALLINT,
+                num_olimpiada CHAR(4),
+                num_modding CHAR(4),
+                num_c3runner CHAR(4),
                 fecha_celebracion DATE,
                 fecha_apertura DATE,
                 fecha_cierre DATE,
@@ -81,7 +83,7 @@ if(current_user_can('administrator')){
         "ciclos" =>  "
             CREATE TABLE IF NOT EXISTS ciclos (
                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                codigo CHAR(6),
+                codigo CHAR(8),
                 nombre VARCHAR(100),
                 grado_id BIGINT,
                 FOREIGN KEY (grado_id) REFERENCES grados(id) ON DELETE CASCADE
@@ -160,15 +162,6 @@ if(current_user_can('administrator')){
             )
         "
     );
-    require_once('./tablas/CentrosTableSeeder.php');
-    require_once('./tablas/GradosTableSeeder.php');
-    require_once('./tablas/CiclosTableSeeder.php');
-    require_once('./tablas/CategoriasTableSeeder.php');
-    $centros = new CentrosTableSeeder();
-    $grados = new GradosTableSeeder();
-    $ciclos = new CiclosTableSeeder();
-    $categorias = new CategoriasTableSeeder();
-
 
     // Ejecuta la consulta SQL para crear la tabla
     foreach ($queries as $tabla => $instruccion) {
@@ -181,30 +174,13 @@ if(current_user_can('administrator')){
             echo "<br>";
         }
     }
-    $centros->run();
-    $grados->run();
-    $ciclos->run();
-    $categorias->run();
-    $edicion = [
-        'curso_escolar' => '2023-2024',
-        'num_olimpiada' => 11,
-        'num_modding' => 11,
-        'fecha_celebracion' => '2024-05-20',
-        'fecha_apertura' => '2024-04-01',
-        'fecha_cierre' => '2024-05-10',
-        'css_file' => 'edicion_11.css',
-        'banner' => 'banner_11.jpg',
-    ];
-    $wpdb->insert(
-        "ediciones",
-        $edicion
-    );
-    echo "Edicion 2023-2024 se ha insertado correctamente.";
+
+    echo "Tablas creadas correctamente.";
     echo "<br>";
     echo "<br>";
-    echo "Pulse aqui para volver a la pagina de bases de datos";
+    echo "Pulse aqu&iacute; para insertar los datos iniciales";
     echo "<br>";
-    echo "<a href='/base-datos'>Bases de datos</a>";
+    echo "<a href='table_seeder.php'>Insertar datos iniciales</a>";
     echo "<br>";
     echo "Pulse aqui para volver a la pagina de inicio";
     echo "<br>";

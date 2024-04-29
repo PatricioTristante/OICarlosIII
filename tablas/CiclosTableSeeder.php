@@ -15,10 +15,12 @@ class CiclosTableSeeder {
 
 
             $ciclos = [
-                ['codigo' => 'DAW', 'nombre' => 'Desarrollo de aplicaciones web', 'grado_id' => 2],
-                ['codigo' => 'DAM', 'nombre' => 'Desarrollo de aplicaciones Multiplataforma', 'grado_id' => 2],
-                ['codigo' => 'ASIR', 'nombre' => 'Administracion de sistemas informaticos en red', 'grado_id' => 2],
-                ['codigo' => 'SMR', 'nombre' => 'Sistemas microinformaticos y redes', 'grado_id' => 1]
+                ['id' => 1, 'codigo' => 'IFC-131', 'nombre' => 'Informática y Comunicaciones', 'grado_id' => 1],
+                ['id' => 2, 'codigo' => 'IFC-132', 'nombre' => 'Informática de Oficina', 'grado_id' => 1],
+                ['id' => 3, 'codigo' => 'IFC-221', 'nombre' => 'Sistemas microinformaticos y redes', 'grado_id' => 2],
+                ['id' => 4, 'codigo' => 'IFC-321', 'nombre' => 'Administracion de sistemas informaticos en red', 'grado_id' => 3],
+                ['id' => 5, 'codigo' => 'IFC-322', 'nombre' => 'Desarrollo de aplicaciones Multiplataforma', 'grado_id' => 3],
+                ['id' => 6, 'codigo' => 'IFC-323', 'nombre' => 'Desarrollo de aplicaciones web', 'grado_id' => 3]
             ];
     
 

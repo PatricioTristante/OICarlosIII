@@ -14,9 +14,9 @@ class GradosTableSeeder {
             $wpdb->query("ALTER TABLE grados AUTO_INCREMENT = 1");
             
                 $grados = [
-                    ['nombre' => 'Informatica'],
-                    ['nombre' => 'Administracion'],
-                    ['nombre' => 'Comercio y Marketing'],
+                    ['id' => 1, 'nombre' => 'Formación Profesional Básica'],
+                    ['id' => 2, 'nombre' => 'F.P. Grado Medio'],
+                    ['id' => 3, 'nombre' => 'F.P. Grado Superior'],
                 ];
 
                 foreach ($grados as $grado) {
