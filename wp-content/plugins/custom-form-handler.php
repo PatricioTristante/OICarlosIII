@@ -53,6 +53,80 @@ function custom_form_request() {
             }
         }
 
+        if($_POST['categoria'] == '4'){
+            if ($_POST['nombre4'] != '' && $_POST['dni4'] != '') {
+                $usuario = explode(" ", $_POST['nombre4']);
+                $apellido2 = (count($usuario) > 2) ? array_pop($usuario) : '';
+                $apellido1 = array_pop($usuario);
+                $usuarios[] = array('nombre' => implode(" ", $usuario)
+                                  , 'apellidos' => $apellido1 . ' ' . $apellido2
+                                  , 'ciclo_id' => $_POST['ciclo']
+                                  , 'identificacion' => $_POST['dni4']
+                                  , 'ciclo_id' => $_POST['ciclo']);
+            }else if($_POST['nombre4'] != '' || $_POST['dni4'] != ''){
+                if($advertencia != ''){
+                    $advertencia .= ' , no se ha introducido el nombre y/o DNI del alumno 4';
+                }
+                else{
+                    $advertencia = 'No se ha introducido el nombre y/o DNI del alumno 4';
+                }
+            }
+
+            if ($_POST['nombre5'] != '' && $_POST['dni5'] != '') {
+                $usuario = explode(" ", $_POST['nombre5']);
+                $apellido2 = (count($usuario) > 2) ? array_pop($usuario) : '';
+                $apellido1 = array_pop($usuario);
+                $usuarios[] = array('nombre' => implode(" ", $usuario)
+                                  , 'apellidos' => $apellido1 . ' ' . $apellido2
+                                  , 'ciclo_id' => $_POST['ciclo']
+                                  , 'identificacion' => $_POST['dni5']
+                                  , 'ciclo_id' => $_POST['ciclo']);
+            }else if($_POST['nombre5'] != '' || $_POST['dni5'] != ''){
+                if($advertencia != ''){
+                    $advertencia .= ' , no se ha introducido el nombre y/o DNI del alumno 5';
+                }
+                else{
+                    $advertencia = 'No se ha introducido el nombre y/o DNI del alumno 5';
+                }
+            }
+
+            if ($_POST['nombre6'] != '' && $_POST['dni6'] != '') {
+                $usuario = explode(" ", $_POST['nombre6']);
+                $apellido2 = (count($usuario) > 2) ? array_pop($usuario) : '';
+                $apellido1 = array_pop($usuario);
+                $usuarios[] = array('nombre' => implode(" ", $usuario)
+                                  , 'apellidos' => $apellido1 . ' ' . $apellido2
+                                  , 'ciclo_id' => $_POST['ciclo']
+                                  , 'identificacion' => $_POST['dni6']
+                                  , 'ciclo_id' => $_POST['ciclo']);
+            }else if($_POST['nombre6'] != '' || $_POST['dni6'] != ''){
+                if($advertencia != ''){
+                    $advertencia .= ' , no se ha introducido el nombre y/o DNI del alumno 6';
+                }
+                else{
+                    $advertencia = 'No se ha introducido el nombre y/o DNI del alumno 6';
+                }
+            }
+
+            if ($_POST['nombre7'] != '' && $_POST['dni7'] != '') {
+                $usuario = explode(" ", $_POST['nombre7']);
+                $apellido2 = (count($usuario) > 2) ? array_pop($usuario) : '';
+                $apellido1 = array_pop($usuario);
+                $usuarios[] = array('nombre' => implode(" ", $usuario)
+                                  , 'apellidos' => $apellido1 . ' ' . $apellido2
+                                  , 'ciclo_id' => $_POST['ciclo']
+                                  , 'identificacion' => $_POST['dni7']
+                                  , 'ciclo_id' => $_POST['ciclo']);
+            }else if($_POST['nombre7'] != '' || $_POST['dni7'] != ''){
+                if($advertencia != ''){
+                    $advertencia .= ' , no se ha introducido el nombre y/o DNI del alumno 7';
+                }
+                else{
+                    $advertencia = 'No se ha introducido el nombre y/o DNI del alumno 7';
+                }
+            }
+        }
+
         $usuario = explode(" ", $_POST['prof_resp']);
         $apellido2 = (count($usuario) > 2) ? array_pop($usuario) : '';
         $apellido1 = array_pop($usuario);

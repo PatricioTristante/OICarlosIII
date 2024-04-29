@@ -120,15 +120,7 @@ Template Name: Plantilla base
 											<div class="col-12">
 												<input type="text" name="email_prof_resp" id="email_prof_resp" placeholder="Correo Profesor responsable*" required/>
 											</div>
-											<div class="col-12">
-												<input type="text" name="grupo" id="grupo" placeholder="Nombre del grupo*" required/>
-											</div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="nombre1" id="nombre1" placeholder="Nombre Alumno 1*" required/></div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="dni1" id="dni1" placeholder="DNI Alumno 1*" required/></div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="nombre2" id="nombre2" placeholder="Nombre Alumno 2"/></div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="dni2" id="dni2" placeholder="DNI Alumno 2"/></div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="nombre3" id="nombre3" placeholder="Nombre Alumno 3"/></div>
-											<div class="col-6 col-12-xsmall"><input type="text" name="dni3" id="dni3" placeholder="DNI Alumno 3"/></div>
+
 											<?php
 												$ciclos = $wpdb->get_results("SELECT * FROM ciclos");
 											?>
@@ -150,10 +142,21 @@ Template Name: Plantilla base
 												<select name="categoria" id="categoria" disabled required>
 													<option value="" default>- Selecciona la categoria en la que participará el grupo/alumno -</option>
 													<?php foreach($categorias as $categoria):?>
-														<option value="<?= $categoria->id ?>" class="<?= $categoria->grado_id ?>"><?= $categoria->nombre ?></option>
+														<option value="<?= $categoria->id ?>"><?= $categoria->nombre ?></option>
 													<?php endforeach; ?>
 												</select>
 											</div>
+
+											<div class="col-12 oculto grupo">
+												<input type="text" name="grupo" id="grupo" placeholder="Nombre del grupo*" required/>
+											</div>
+											<?php for ($i=1; $i <= 7; $i++): ?>
+												<div class="col-6 col-12-xsmall oculto alumnos"><input type="text" name="nombre<?= $i ?>" id="nombre<?= $i ?>" placeholder="Nombre Alumno <?= $i == 1 ? $i . "*" : $i ?>" <?= $i == 1 ? "required" : ""?>/></div>
+												<div class="col-6 col-12-xsmall oculto dnis"><input type="text" name="dni<?= $i ?>" id="dni<?= $i ?>" placeholder="DNI Alumno <?= $i == 1 ? $i . "*" : $i ?>" <?= $i == 1 ? "required" : ""?>/></div>
+											<?php endfor; ?>
+											
+
+											
 											
 											<div class="col-12">
 												<ul class="actions">

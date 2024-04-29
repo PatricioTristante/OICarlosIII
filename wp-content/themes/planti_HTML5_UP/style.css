@@ -54,3 +54,7 @@ Description: Plantilla HTML5 UP adaptada para wordpress
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
   }
+
+.oculto{
+    display: none !important;
+}
