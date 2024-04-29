@@ -39,6 +39,7 @@ window.onload = function() {
       if (gradoId != '') {
           categoriaSelect.disabled = false;
           categoriaSelect.options[0].selected = true;
+          campoGrupo.classList.add('oculto');
           for (let i = 0; i < camposAlumnos.length; i++) {
             camposAlumnos[i].classList.add('oculto');
             camposAlumnos[i].value = '';
