@@ -180,12 +180,12 @@ function custom_form_request() {
             //Esto se hace para reflejar las inscripcciones erroneas que se hayan producido, se guardan en la tabla errores_inscripcion
             $error = array('grupo_id' => $grupo_id, 'error' => $advertencia);
             $wpdb->insert('errores_inscripcion', $error);
-            wp_redirect(home_url('/enviado?advertencia=' . $advertencia));
+            wp_redirect(home_url('/enviado?advertencia=' . $advertencia . '&correo=' . $_POST['email_prof_resp']));
             //Redirigir a la página de confirmación pero con advertencia y con un tiempo de redireccion a la home del doble de tiempo
         }
         else
         {
-            wp_redirect(home_url('/enviado')); // Redirigir a la página de confirmación
+            wp_redirect(home_url('/enviado?correo=' . $_POST['email_prof_resp'])); // Redirigir a la página de confirmación
         }
         exit;
 
