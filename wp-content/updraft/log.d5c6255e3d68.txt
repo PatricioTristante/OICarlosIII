@@ -1,0 +1,486 @@
+0000.001 (0) Opened log file at time: Thu, 02 May 2024 22:06:51 +0000 on http://oicarlosiii.es:8080
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.23.11.26 WP: 6.5.2 PHP: 8.2.12 (apache2handler, Windows NT DESKTOP-QMI14OB 10.0 build 19045 (Windows 10) AMD64) MySQL: 10.4.32-MariaDB (max packet size=1048576) WPLANG: es_ES Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 50.1M | 52M) multisite: N openssl: OpenSSL 3.0.11 19 Sep 2023 mcrypt: N LANG:  ZipArchive::addFile: N
+0000.007 (0) Free space on disk containing Updraft's temporary directory: 5153.2 MB
+0000.017 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.042 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.058 (0) Set semaphore last lock (fd) time to 2024-05-02 22:06:51
+0000.059 (0) Semaphore lock (fd) complete
+0000.076 (0) Backup run: resumption=0, nonce=d5c6255e3d68, file_nonce=d5c6255e3d68 begun at=1714687611 (0s ago), job type=backup
+0000.085 (0) Scheduling a resumption (1) after 302 seconds (1714687913) in case this run gets aborted
+0000.130 (0) Checking if we have a zip executable available
+0000.136 (0) Zip engine: ZipArchive (a.k.a. php-zip) is not available or is disabled (will use PclZip (much slower) if needed)
+0000.140 (0) Creation of backups of directories: beginning
+0000.153 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0001.621 (0) Total entities for the zip file: 444 directories, 2801 files (0 skipped as non-modified), 41.3 MB
+0001.624 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 42301 KB, split: 409600 KB)
+0001.722 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.757 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.790 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.900 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.925 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.965 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 600 files added (on-disk size: 0 KB)
+0001.988 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 700 files added (on-disk size: 0 KB)
+0002.014 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 800 files added (on-disk size: 0 KB)
+0002.041 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 900 files added (on-disk size: 0 KB)
+0002.075 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0002.098 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1100 files added (on-disk size: 0 KB)
+0002.138 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1200 files added (on-disk size: 0 KB)
+0002.171 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1300 files added (on-disk size: 0 KB)
+0002.200 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1400 files added (on-disk size: 0 KB)
+0002.229 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1500 files added (on-disk size: 0 KB)
+0002.255 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1600 files added (on-disk size: 0 KB)
+0002.286 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1700 files added (on-disk size: 0 KB)
+0002.317 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1800 files added (on-disk size: 0 KB)
+0002.345 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 1900 files added (on-disk size: 0 KB)
+0002.375 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2000 files added (on-disk size: 0 KB)
+0002.407 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2100 files added (on-disk size: 0 KB)
+0002.447 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2200 files added (on-disk size: 0 KB)
+0002.484 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2300 files added (on-disk size: 0 KB)
+0002.519 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2400 files added (on-disk size: 0 KB)
+0002.545 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2500 files added (on-disk size: 0 KB)
+0002.568 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2600 files added (on-disk size: 0 KB)
+0002.594 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2700 files added (on-disk size: 0 KB)
+0002.622 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.tmp: 2800 files added (on-disk size: 0 KB)
+0060.453 (0) Creating zip file manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.list-temp.tmp)
+0060.465 (0) Successfully created zip file manifest (size: 246374)
+0060.572 (0) Created plugins zip (0) - 13301.1 KB in 60.4 s (220.2 KB/s) (sha1: c05e604075be12a2b313a984bfc16ef0bf088522, sha256: 399a1115c551cc3040500c47c540df90d1ee579d844f825b42618091d0b43f67)
+0060.586 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0060.588 (0) No remote despatch: user chose no remote backup service
+0060.591 (0) Recording as successfully uploaded: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip
+0060.598 (0) Deleting zip manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip.list.tmp)
+0060.606 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0060.610 (0) Number of backup sets in history: 2; groups (db): 1
+0060.613 (0) Examining (for databases) backup set with group_id=0, nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0060.616 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0060.619 (0) Examining (for databases) backup set with group_id=0, nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0060.619 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0060.619 (0) Number of backup sets in history: 2; groups (files): 1
+0060.621 (0) Examining (for files) backup set with nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0060.621 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0060.623 (0) Examining (for files) backup set with nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0060.623 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0060.623 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0060.635 (0) Beginning creation of dump of themes (split every: 400 MB)
+0060.661 (0) Total entities for the zip file: 15 directories, 65 files (0 skipped as non-modified), 3.5 MB
+0060.663 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 3570.1 KB, split: 409600 KB)
+0061.499 (0) Creating zip file manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-themes.zip.list-temp.tmp)
+0061.503 (0) Successfully created zip file manifest (size: 4246)
+0061.531 (0) Created themes zip (0) - 1797.9 KB in 0.9 s (2028.5 KB/s) (sha1: a6bc90eaa2ef7bd6bdec7fb6d761d4f68b46d5a0, sha256: eebecffbb4cd2a9e2da30fc16130a3c421c7cac34efe4802da1dcb31fe9a6392)
+0061.543 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0061.546 (0) No remote despatch: user chose no remote backup service
+0061.549 (0) Recording as successfully uploaded: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-themes.zip
+0061.556 (0) Deleting zip manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-themes.zip.list.tmp)
+0061.563 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0061.565 (0) Number of backup sets in history: 2; groups (db): 1
+0061.567 (0) Examining (for databases) backup set with group_id=0, nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0061.567 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0061.569 (0) Examining (for databases) backup set with group_id=0, nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0061.569 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0061.570 (0) Number of backup sets in history: 2; groups (files): 1
+0061.572 (0) Examining (for files) backup set with nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0061.572 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0061.574 (0) Examining (for files) backup set with nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0061.575 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0061.575 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0061.589 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0061.591 (0) Looking for candidates to backup in: C:\xampp\htdocs\wordpress/wp-content/uploads
+0061.594 (0) finding files: 2024: adding to list (1)
+0061.595 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0061.605 (0) Total entities for the zip file: 3 directories, 0 files (0 skipped as non-modified), 0 MB
+0061.607 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 0 KB, split: 409600 KB)
+0061.642 (0) Did not find any files in the zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-uploads.zip.tmp
+0061.651 (0) Created uploads zip (0) - 0.3 KB in 0 s (7 KB/s) (sha1: 6ab6d63eac754185968486b81c914d4046ae77f0, sha256: 15833cd6deae3cbab9512a7548b329065fde7fdaf4f00f63cb57303fee1d4fd4)
+0061.657 (0) No backup of mu-plugins: excluded by user's options
+0061.662 (0) Exclusion option setting (wpcore): 
+0061.664 (0) Looking for candidates to backup in: C:\xampp\htdocs\wordpress
+0061.666 (0) finding files: .git: adding to list (1)
+0061.667 (0) finding files: .gitattributes: adding to list (2)
+0061.670 (0) finding files: .gitignore: adding to list (3)
+0061.672 (0) finding files: .htaccess: adding to list (4)
+0061.674 (0) finding files: create_tables.php: adding to list (5)
+0061.676 (0) finding files: index.php: adding to list (6)
+0061.678 (0) finding files: license.txt: adding to list (7)
+0061.680 (0) finding files: migrar: adding to list (8)
+0061.683 (0) finding files: readme.html: adding to list (9)
+0061.685 (0) finding files: README.md: adding to list (10)
+0061.687 (0) finding files: tablas: adding to list (11)
+0061.690 (0) finding files: table_seeder.php: adding to list (12)
+0061.692 (0) finding files: wp-activate.php: adding to list (13)
+0061.694 (0) finding files: wp-admin: adding to list (14)
+0061.696 (0) finding files: wp-blog-header.php: adding to list (15)
+0061.698 (0) finding files: wp-comments-post.php: adding to list (16)
+0061.700 (0) finding files: wp-config-sample.php: adding to list (17)
+0061.703 (0) finding files: wp-config.php: adding to list (18)
+0061.705 (0) finding files: wp-content: skipping: this is the wp-content directory
+0061.707 (0) finding files: wp-cron.php: adding to list (19)
+0061.709 (0) finding files: wp-includes: adding to list (20)
+0061.711 (0) finding files: wp-links-opml.php: adding to list (21)
+0061.714 (0) finding files: wp-load.php: adding to list (22)
+0061.716 (0) finding files: wp-login.php: adding to list (23)
+0061.718 (0) finding files: wp-mail.php: adding to list (24)
+0061.720 (0) finding files: wp-settings.php: adding to list (25)
+0061.722 (0) finding files: wp-signup.php: adding to list (26)
+0061.724 (0) finding files: wp-trackback.php: adding to list (27)
+0061.727 (0) finding files: xmlrpc.php: adding to list (28)
+0061.729 (0) Beginning creation of dump of wpcore (split every: 400 MB)
+0063.936 (0) Total entities for the zip file: 538 directories, 9058 files (0 skipped as non-modified), 369.3 MB
+0063.939 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 378125.2 KB, split: 409600 KB)
+0063.978 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 100 files added (on-disk size: 0 KB)
+0064.005 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 200 files added (on-disk size: 0 KB)
+0064.036 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 300 files added (on-disk size: 0 KB)
+0064.063 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 400 files added (on-disk size: 0 KB)
+0064.091 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 500 files added (on-disk size: 0 KB)
+0064.114 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 600 files added (on-disk size: 0 KB)
+0064.145 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 700 files added (on-disk size: 0 KB)
+0064.174 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 800 files added (on-disk size: 0 KB)
+0064.203 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 900 files added (on-disk size: 0 KB)
+0064.232 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0064.260 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1100 files added (on-disk size: 0 KB)
+0064.280 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1200 files added (on-disk size: 0 KB)
+0064.301 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1300 files added (on-disk size: 0 KB)
+0064.336 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1400 files added (on-disk size: 0 KB)
+0064.361 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1500 files added (on-disk size: 0 KB)
+0064.382 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1600 files added (on-disk size: 0 KB)
+0064.404 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1700 files added (on-disk size: 0 KB)
+0064.423 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1800 files added (on-disk size: 0 KB)
+0064.446 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 1900 files added (on-disk size: 0 KB)
+0064.471 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2000 files added (on-disk size: 0 KB)
+0064.493 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2100 files added (on-disk size: 0 KB)
+0064.518 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2200 files added (on-disk size: 0 KB)
+0064.538 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2300 files added (on-disk size: 0 KB)
+0064.558 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2400 files added (on-disk size: 0 KB)
+0064.579 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2500 files added (on-disk size: 0 KB)
+0064.611 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2600 files added (on-disk size: 0 KB)
+0064.632 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2700 files added (on-disk size: 0 KB)
+0064.661 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2800 files added (on-disk size: 0 KB)
+0064.686 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 2900 files added (on-disk size: 0 KB)
+0064.707 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3000 files added (on-disk size: 0 KB)
+0064.732 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3100 files added (on-disk size: 0 KB)
+0064.755 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3200 files added (on-disk size: 0 KB)
+0064.776 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3300 files added (on-disk size: 0 KB)
+0064.797 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3400 files added (on-disk size: 0 KB)
+0064.820 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3500 files added (on-disk size: 0 KB)
+0064.841 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3600 files added (on-disk size: 0 KB)
+0064.868 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3700 files added (on-disk size: 0 KB)
+0064.890 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3800 files added (on-disk size: 0 KB)
+0064.910 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 3900 files added (on-disk size: 0 KB)
+0064.934 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4000 files added (on-disk size: 0 KB)
+0064.960 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4100 files added (on-disk size: 0 KB)
+0064.986 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4200 files added (on-disk size: 0 KB)
+0065.011 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4300 files added (on-disk size: 0 KB)
+0065.038 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4400 files added (on-disk size: 0 KB)
+0065.066 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4500 files added (on-disk size: 0 KB)
+0065.095 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4600 files added (on-disk size: 0 KB)
+0065.115 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4700 files added (on-disk size: 0 KB)
+0065.135 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4800 files added (on-disk size: 0 KB)
+0065.164 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 4900 files added (on-disk size: 0 KB)
+0065.186 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5000 files added (on-disk size: 0 KB)
+0065.213 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5100 files added (on-disk size: 0 KB)
+0065.246 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5200 files added (on-disk size: 0 KB)
+0065.276 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5300 files added (on-disk size: 0 KB)
+0065.302 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5400 files added (on-disk size: 0 KB)
+0065.325 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5500 files added (on-disk size: 0 KB)
+0065.350 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5600 files added (on-disk size: 0 KB)
+0065.370 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5700 files added (on-disk size: 0 KB)
+0065.391 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5800 files added (on-disk size: 0 KB)
+0065.410 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 5900 files added (on-disk size: 0 KB)
+0065.430 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6000 files added (on-disk size: 0 KB)
+0065.464 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6100 files added (on-disk size: 0 KB)
+0065.494 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6200 files added (on-disk size: 0 KB)
+0065.514 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6300 files added (on-disk size: 0 KB)
+0065.535 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6400 files added (on-disk size: 0 KB)
+0065.558 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6500 files added (on-disk size: 0 KB)
+0065.589 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6600 files added (on-disk size: 0 KB)
+0065.610 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6700 files added (on-disk size: 0 KB)
+0065.630 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6800 files added (on-disk size: 0 KB)
+0065.649 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 6900 files added (on-disk size: 0 KB)
+0065.674 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7000 files added (on-disk size: 0 KB)
+0065.702 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7100 files added (on-disk size: 0 KB)
+0065.722 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7200 files added (on-disk size: 0 KB)
+0065.742 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7300 files added (on-disk size: 0 KB)
+0065.762 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7400 files added (on-disk size: 0 KB)
+0065.781 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7500 files added (on-disk size: 0 KB)
+0065.813 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7600 files added (on-disk size: 0 KB)
+0065.833 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7700 files added (on-disk size: 0 KB)
+0065.869 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7800 files added (on-disk size: 0 KB)
+0065.895 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 7900 files added (on-disk size: 0 KB)
+0065.917 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8000 files added (on-disk size: 0 KB)
+0065.959 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8100 files added (on-disk size: 0 KB)
+0065.980 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8200 files added (on-disk size: 0 KB)
+0066.014 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8300 files added (on-disk size: 0 KB)
+0066.034 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8400 files added (on-disk size: 0 KB)
+0066.066 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8500 files added (on-disk size: 0 KB)
+0066.114 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8600 files added (on-disk size: 0 KB)
+0066.149 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8700 files added (on-disk size: 0 KB)
+0066.182 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8800 files added (on-disk size: 0 KB)
+0066.213 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 8900 files added (on-disk size: 0 KB)
+0066.248 (0) Zip: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.tmp: 9000 files added (on-disk size: 0 KB)
+0303.526 (1) Opened log file at time: Thu, 02 May 2024 22:11:55 +0000 on http://oicarlosiii.es:8080
+0303.530 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.23.11.26 WP: 6.5.2 PHP: 8.2.12 (apache2handler, Windows NT DESKTOP-QMI14OB 10.0 build 19045 (Windows 10) AMD64) MySQL: 10.4.32-MariaDB (max packet size=1048576) WPLANG: es_ES Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 43M | 48M) multisite: N openssl: OpenSSL 3.0.11 19 Sep 2023 mcrypt: N LANG:  ZipArchive::addFile: N
+0303.535 (1) Free space on disk containing Updraft's temporary directory: 4688.9 MB
+0303.537 (1) Requesting backup semaphore lock (d5c6255e3d68)
+0303.542 (1) [Debug] Lock option (updraft_lock_d5c6255e3d68, wp_options) was created in the database
+0303.544 (1) [Info] Lock (updraft_lock_d5c6255e3d68, wp_options) acquired after initialising the database
+0303.549 (1) Backup run: resumption=1, nonce=d5c6255e3d68, file_nonce=d5c6255e3d68 begun at=1714687611 (304s ago), job type=backup, previous check-in=61.63s
+0303.553 (1) Scheduling a resumption (2) after 302 seconds (1714688217) in case this run gets aborted
+0303.566 (1) Checking if we have a zip executable available
+0303.569 (1) Zip engine: ZipArchive (a.k.a. php-zip) is not available or is disabled (will use PclZip (much slower) if needed)
+0303.571 (1) Creation of backups of directories: had begun; will resume
+0303.579 (1) Beginning creation of dump of plugins (split every: 400 MB)
+0303.595 (1) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip: this file has already been created (age: 244 s)
+0303.878 (1) Terminate: pclzip-66340faa9dc03.tmp exists with activity within the last 30 seconds (time_mod=1714687915, time_now=1714687915, diff=0, size=152386KB). This likely means that another UpdraftPlus run is at work; so we will exit.
+0303.894 (1) Rescheduling resumption 2: moving to 422 seconds from now (1714688337)
+0303.915 (1) To decrease the likelihood of overlaps, increasing resumption interval to: 302 + 120 = 422
+0524.105 (0) The time we have been running (524.1) is approaching the resumption interval (302) - increasing resumption interval to 555
+0524.171 (0) Creating zip file manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.list-temp.tmp)
+0524.199 (0) Successfully created zip file manifest (size: 564257)
+0526.778 (0) Created wpcore zip (0) - 333417.2 KB in 465 s (717 KB/s) (sha1: 1e80dfd16913ae3dc56d039fe38d17fa7e9313e1, sha256: 5b9b86c6a1ecdf7d24126310e884dc4e91be0a05e597545a2a33ab0528acd560)
+0526.794 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0526.797 (0) No remote despatch: user chose no remote backup service
+0526.799 (0) Recording as successfully uploaded: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip
+0526.805 (0) Deleting zip manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip.list.tmp)
+0526.811 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0526.815 (0) Number of backup sets in history: 2; groups (db): 1
+0526.818 (0) Examining (for databases) backup set with group_id=0, nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0526.821 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0526.824 (0) Examining (for databases) backup set with group_id=0, nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0526.824 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0526.824 (0) Number of backup sets in history: 2; groups (files): 1
+0526.826 (0) Examining (for files) backup set with nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0526.826 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0526.829 (0) Examining (for files) backup set with nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0526.829 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0526.829 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0526.845 (0) Beginning backup of other directories found in the content directory (index: 0)
+0526.848 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0526.850 (0) Looking for candidates to backup in: C:\xampp\htdocs\wordpress/wp-content
+0526.852 (0) finding files: index.php: adding to list (1)
+0526.854 (0) finding files: languages: adding to list (2)
+0526.857 (0) finding files: plugins: skipping: this is the plugins directory
+0526.860 (0) finding files: themes: skipping: this is the themes directory
+0526.863 (0) finding files: updraft: skipping: this is the updraft directory
+0526.865 (0) finding files: upgrade: skipping: excluded by options
+0526.868 (0) finding files: uploads: skipping: this is the uploads directory
+0526.895 (0) Total entities for the zip file: 3 directories, 84 files (0 skipped as non-modified), 4.2 MB
+0526.897 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 4328.3 KB, split: 409600 KB)
+0527.569 (0) The time we have been running (527.6) is approaching the resumption interval (555) - increasing resumption interval to 558
+0527.576 (0) Creating zip file manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-others.zip.list-temp.tmp)
+0527.582 (0) Successfully created zip file manifest (size: 5122)
+0527.602 (0) Created others zip (0) - 1204.8 KB in 0.7 s (1662.2 KB/s) (sha1: bd13ac070da9c06c193602246b3e63cf563e1a13, sha256: a8d12379ef513ee78944cd4e747e2fafb62d1799defe0198cc5b4f66c96f6392)
+0527.612 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0527.615 (0) No remote despatch: user chose no remote backup service
+0527.617 (0) Recording as successfully uploaded: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-others.zip
+0527.623 (0) Deleting zip manifest (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-others.zip.list.tmp)
+0527.629 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0527.632 (0) Number of backup sets in history: 2; groups (db): 1
+0527.634 (0) Examining (for databases) backup set with group_id=0, nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0527.634 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0527.636 (0) Examining (for databases) backup set with group_id=0, nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0527.637 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0527.637 (0) Number of backup sets in history: 2; groups (files): 1
+0527.640 (0) Examining (for files) backup set with nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0527.640 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0527.642 (0) Examining (for files) backup set with nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0527.642 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0527.642 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0527.661 (0) Saving backup status to database (elements: 10)
+0527.667 (0) Beginning creation of database dump (WordPress DB)
+0527.670 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0527.719 (0) Table wp_options: Total expected rows (via COUNT): 254
+0527.721 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0527.778 (0) Table wp_options: Rows added in this batch (next record: 710): 250 (uncompressed bytes in this segment=1334752) in 0.09 seconds
+0527.792 (0) Table wp_options: finishing file(s) (2, 333.2 KB)
+0527.808 (0) Table wp_users: Total expected rows (via COUNT): 1
+0527.810 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0527.816 (0) Table wp_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1196) in 0.02 seconds
+0527.826 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0527.846 (0) Table wp_usermeta: Total expected rows (via COUNT): 22
+0527.848 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0527.851 (0) Table wp_usermeta: Rows added in this batch (next record: 23): 22 (uncompressed bytes in this segment=2911) in 0.02 seconds
+0527.862 (0) Table wp_usermeta: finishing file(s) (2, 1.3 KB)
+0527.864 (0) Skipping table (lacks our prefix (wp_)): users
+0527.895 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 9
+0527.899 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0527.904 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 57): 9 (uncompressed bytes in this segment=5444) in 0.04 seconds
+0527.923 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 1.2 KB)
+0527.938 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0527.945 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=624) in 0.02 seconds
+0527.956 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0527.976 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 3
+0527.978 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0527.983 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=697) in 0.02 seconds
+0527.994 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0528.012 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 23
+0528.014 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.018 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 37): 23 (uncompressed bytes in this segment=2742) in 0.02 seconds
+0528.026 (0) The time we have been running (528) is approaching the resumption interval (558) - increasing resumption interval to 559
+0528.036 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 0.7 KB)
+0528.062 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0528.068 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=634) in 0.03 seconds
+0528.080 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0528.099 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0528.102 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.110 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1921) in 0.02 seconds
+0528.122 (0) Table wp_comments: finishing file(s) (2, 0.8 KB)
+0528.140 (0) Table wp_links: Total expected rows (via COUNT): 0
+0528.147 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.02 seconds
+0528.157 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0528.181 (0) Table wp_postmeta: Total expected rows (via COUNT): 796
+0528.183 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.192 (0) Table wp_postmeta: Rows added in this batch (next record: 842): 796 (uncompressed bytes in this segment=47932) in 0.03 seconds
+0528.209 (0) Table wp_postmeta: finishing file(s) (2, 7 KB)
+0528.236 (0) Table wp_posts: Total expected rows (via COUNT): 65
+0528.238 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.245 (0) Table wp_posts: Rows added in this batch (next record: 76): 65 (uncompressed bytes in this segment=50533) in 0.03 seconds
+0528.262 (0) Table wp_posts: finishing file(s) (2, 6.8 KB)
+0528.280 (0) Table wp_term_relationships: Total expected rows (approximate): 0
+0528.287 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 1 (uncompressed bytes in this segment=696) in 0.02 seconds
+0528.297 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0528.318 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 1
+0528.321 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.326 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=858) in 0.02 seconds
+0528.342 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.4 KB)
+0528.362 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0528.367 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.02 seconds
+0528.382 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0528.399 (0) Table wp_terms: Total expected rows (via COUNT): 1
+0528.402 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.407 (0) Table wp_terms: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=673) in 0.02 seconds
+0528.417 (0) Table wp_terms: finishing file(s) (2, 0.4 KB)
+0528.420 (0) Skipping table (lacks our prefix (wp_)): categorias
+0528.422 (0) Skipping table (lacks our prefix (wp_)): categorias_ediciones
+0528.424 (0) Skipping table (lacks our prefix (wp_)): centros
+0528.426 (0) Skipping table (lacks our prefix (wp_)): ciclos
+0528.428 (0) Skipping table (lacks our prefix (wp_)): ediciones
+0528.430 (0) Skipping table (lacks our prefix (wp_)): errores_inscripcion
+0528.433 (0) Skipping table (lacks our prefix (wp_)): grados
+0528.436 (0) Skipping table (lacks our prefix (wp_)): grupos
+0528.438 (0) Skipping table (lacks our prefix (wp_)): participantes
+0528.441 (0) Skipping table (lacks our prefix (wp_)): patrocinadores
+0528.443 (0) Skipping table (lacks our prefix (wp_)): pruebas
+0528.445 (0) Skipping table (lacks our prefix (wp_)): resultados_pruebas
+0528.468 (0) Table wp_wpforms_logs: Total expected rows (via COUNT): 0
+0528.473 (0) Table wp_wpforms_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=659) in 0.02 seconds
+0528.484 (0) Table wp_wpforms_logs: finishing file(s) (2, 0.4 KB)
+0528.505 (0) Table wp_wpforms_payment_meta: Total expected rows (via COUNT): 0
+0528.510 (0) Table wp_wpforms_payment_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=690) in 0.02 seconds
+0528.524 (0) Table wp_wpforms_payment_meta: finishing file(s) (2, 0.4 KB)
+0528.545 (0) Table wp_wpforms_payments: Total expected rows (via COUNT): 0
+0528.550 (0) Table wp_wpforms_payments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1650) in 0.02 seconds
+0528.563 (0) Table wp_wpforms_payments: finishing file(s) (2, 0.6 KB)
+0528.590 (0) Table wp_wpforms_tasks_meta: Total expected rows (via COUNT): 4
+0528.592 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.597 (0) Table wp_wpforms_tasks_meta: Rows added in this batch (next record: 5): 4 (uncompressed bytes in this segment=911) in 0.03 seconds
+0528.612 (0) Table wp_wpforms_tasks_meta: finishing file(s) (2, 0.5 KB)
+0528.633 (0) Table wp_wpmailsmtp_debug_events: Total expected rows (via COUNT): 7
+0528.635 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.638 (0) Table wp_wpmailsmtp_debug_events: Rows added in this batch (next record: 7): 7 (uncompressed bytes in this segment=2324) in 0.02 seconds
+0528.649 (0) Table wp_wpmailsmtp_debug_events: finishing file(s) (2, 0.7 KB)
+0528.667 (0) Table wp_wpmailsmtp_tasks_meta: Total expected rows (via COUNT): 1
+0528.669 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0528.672 (0) Table wp_wpmailsmtp_tasks_meta: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=704) in 0.02 seconds
+0528.686 (0) Table wp_wpmailsmtp_tasks_meta: finishing file(s) (2, 0.4 KB)
+0528.688 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\wordpress/wp-content/updraft/backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db.gz (line 1976, C:\xampp\htdocs\wordpress\wp-content\plugins\updraftplus\backup.php)
+0528.691 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_options.table.tmpr711.gz (1/35/fopen): adding to final database dump
+0528.698 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_options.table.gz (2/35/fopen): adding to final database dump
+0528.700 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_users.table.tmpr2.gz (3/35/fopen): adding to final database dump
+0528.702 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_users.table.gz (4/35/fopen): adding to final database dump
+0528.704 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_usermeta.table.tmpr24.gz (5/35/fopen): adding to final database dump
+0528.706 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_usermeta.table.gz (6/35/fopen): adding to final database dump
+0528.708 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_actions.table.tmpr58.gz (7/35/fopen): adding to final database dump
+0528.712 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_actions.table.gz (8/35/fopen): adding to final database dump
+0528.714 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/35/fopen): adding to final database dump
+0528.717 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_claims.table.gz (10/35/fopen): adding to final database dump
+0528.720 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_groups.table.tmpr4.gz (11/35/fopen): adding to final database dump
+0528.722 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_groups.table.gz (12/35/fopen): adding to final database dump
+0528.725 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_logs.table.tmpr38.gz (13/35/fopen): adding to final database dump
+0528.728 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_actionscheduler_logs.table.gz (14/35/fopen): adding to final database dump
+0528.730 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_commentmeta.table.tmpr0.gz (15/35/fopen): adding to final database dump
+0528.733 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_commentmeta.table.gz (16/35/fopen): adding to final database dump
+0528.736 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_comments.table.tmpr2.gz (17/35/fopen): adding to final database dump
+0528.738 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_comments.table.gz (18/35/fopen): adding to final database dump
+0528.741 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_links.table.tmpr0.gz (19/35/fopen): adding to final database dump
+0528.744 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_links.table.gz (20/35/fopen): adding to final database dump
+0528.746 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_postmeta.table.tmpr843.gz (21/35/fopen): adding to final database dump
+0528.750 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_postmeta.table.gz (22/35/fopen): adding to final database dump
+0528.753 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_posts.table.tmpr77.gz (23/35/fopen): adding to final database dump
+0528.756 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_posts.table.gz (24/35/fopen): adding to final database dump
+0528.758 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_term_relationships.table.tmpr100001.gz (25/35/fopen): adding to final database dump
+0528.764 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_term_relationships.table.gz (26/35/fopen): adding to final database dump
+0528.775 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_term_taxonomy.table.tmpr2.gz (27/35/fopen): adding to final database dump
+0528.782 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_term_taxonomy.table.gz (28/35/fopen): adding to final database dump
+0528.787 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_termmeta.table.tmpr0.gz (29/35/fopen): adding to final database dump
+0528.794 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_termmeta.table.gz (30/35/fopen): adding to final database dump
+0528.798 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_terms.table.tmpr2.gz (31/35/fopen): adding to final database dump
+0528.800 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_terms.table.gz (32/35/fopen): adding to final database dump
+0528.803 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_logs.table.tmpr0.gz (33/35/fopen): adding to final database dump
+0528.805 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_logs.table.gz (34/35/fopen): adding to final database dump
+0528.808 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_payment_meta.table.tmpr0.gz (35/35/fopen): adding to final database dump
+0528.811 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_payment_meta.table.gz (36/35/fopen): adding to final database dump
+0528.814 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_payments.table.tmpr0.gz (37/35/fopen): adding to final database dump
+0528.817 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_payments.table.gz (38/35/fopen): adding to final database dump
+0528.819 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_tasks_meta.table.tmpr6.gz (39/35/fopen): adding to final database dump
+0528.821 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpforms_tasks_meta.table.gz (40/35/fopen): adding to final database dump
+0528.824 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpmailsmtp_debug_events.table.tmpr8.gz (41/35/fopen): adding to final database dump
+0528.826 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpmailsmtp_debug_events.table.gz (42/35/fopen): adding to final database dump
+0528.828 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpmailsmtp_tasks_meta.table.tmpr2.gz (43/35/fopen): adding to final database dump
+0528.830 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db-table-wp_wpmailsmtp_tasks_meta.table.gz (44/35/fopen): adding to final database dump
+0528.869 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db.gz: finished writing out complete database file (358 KB)
+0528.898 (0) Total database tables backed up: 22 (backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db.gz, size: 366724, sha1: 4569d288229c5dd921d0b9d9273948a1959564db, sha256: e368c17e57d5db5b0de006f5ea6529e70a972041c325294a90849ced2e6ebe0c)
+0528.908 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-plugins.zip: plugins: This file has already been successfully uploaded
+0528.910 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-themes.zip: themes: This file has already been successfully uploaded
+0528.929 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0528.932 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-wpcore.zip: wpcore: This file has already been successfully uploaded
+0528.935 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-others.zip: others: This file has already been successfully uploaded
+0528.938 (0) backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db.gz: db: This file has not yet been successfully uploaded: will queue
+0528.946 (0) Saving backup history. Total backup size: 341.9 MB
+0528.953 (0) Requesting upload of the files that have not yet been successfully uploaded (2)
+0528.961 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0528.964 (0) No remote despatch: user chose no remote backup service
+0528.966 (0) Recording as successfully uploaded: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-uploads.zip
+0528.972 (0) Recording as successfully uploaded: backup_2024-05-03-0006_Olimpiada_Informatica_Region_de__d5c6255e3d68-db.gz
+0528.980 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0528.985 (0) Number of backup sets in history: 3; groups (db): 1
+0528.987 (0) Examining (for databases) backup set with group_id=0, nonce=d5c6255e3d68, datestamp=1714687611 (May 02 2024 22:06:51)
+0528.988 (0) This backup set is the backup set just made, so will not be deleted.
+0528.988 (0) Examining (for databases) backup set with group_id=0, nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0528.988 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0528.990 (0) Examining (for databases) backup set with group_id=0, nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0528.990 (0) 1714242681: db: this set includes a database (backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-db.gz); db count is now 2
+0528.990 (0) 1714242681: db: over retain limit (2); will delete this database
+0528.990 (0) Delete file: backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-db.gz, service=none
+0528.992 (0) Deleting local copy (backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-db.gz)
+0528.996 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0528.997 (0) Number of backup sets in history: 3; groups (files): 1
+0528.998 (0) Examining (for files) backup set with nonce=d5c6255e3d68, datestamp=1714687611 (May 02 2024 22:06:51)
+0528.998 (0) This backup set is the backup set just made, so will not be deleted.
+0529.001 (0) This backup set is the backup set just made, so will not be deleted.
+0529.001 (0) This backup set is the backup set just made, so will not be deleted.
+0529.001 (0) This backup set is the backup set just made, so will not be deleted.
+0529.001 (0) This backup set is the backup set just made, so will not be deleted.
+0529.001 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0529.003 (0) Examining (for files) backup set with nonce=d5c111a6a131, datestamp=1714578937 (May 01 2024 15:55:37)
+0529.004 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0529.004 (0) Examining (for files) backup set with nonce=cba7d2a45bed, datestamp=1714242681 (Apr 27 2024 18:31:21)
+0529.004 (0) plugins: over retain limit (2); will delete this file entity
+0529.004 (0) themes: over retain limit (2); will delete this file entity
+0529.004 (0) uploads: over retain limit (2); will delete this file entity
+0529.004 (0) others: over retain limit (2); will delete this file entity
+0529.004 (0) Delete file: backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-plugins.zip, service=none
+0529.007 (0) Deleting local copy (backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-plugins.zip)
+0529.009 (0) Delete file: backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-themes.zip, service=none
+0529.012 (0) Deleting local copy (backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-themes.zip)
+0529.014 (0) Delete file: backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-uploads.zip, service=none
+0529.016 (0) Deleting local copy (backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-uploads.zip)
+0529.020 (0) Delete file: backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-others.zip, service=none
+0529.022 (0) Deleting local copy (backup_2024-04-27-2031_Olimpiada_Informatica_Region_de__cba7d2a45bed-others.zip)
+0529.032 (0) The time we have been running (529) is approaching the resumption interval (559) - increasing resumption interval to 560
+0529.036 (0) This backup set is now empty; will remove from history
+0529.038 (0) Deleting log file (log.cba7d2a45bed.txt)
+0529.041 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0529.049 (0) Resume backup (d5c6255e3d68, 0): finish run
+0529.054 (0) Decremented the semaphore (fd) by 1
+0529.056 (0) Semaphore (fd) unlocked
+0529.060 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0529.066 (0) No email will/can be sent - the user has not configured an email address.
+0529.068 (0) The backup succeeded and is now complete
