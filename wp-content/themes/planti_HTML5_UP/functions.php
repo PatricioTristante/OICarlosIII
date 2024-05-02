@@ -22,3 +22,18 @@ function add_banner() {
 }
 
 add_action('wp_enqueue_scripts', 'add_CSS');
+
+
+function custom_wp_mail( $destinatario, $asunto, $datos_extra = array() ) {
+   // Variables que deseas pasar a la plantilla de correo
+   $ruta_plantilla = get_template_directory() . '/emails/plantillaEstandar.php';
+   ob_start();
+   include $ruta_plantilla;
+   $mensaje = ob_get_contents();
+   ob_end_clean();
+
+   $headers = array('Content-Type: text/html; charset=UTF-8');
+
+   wp_mail( $destinatario, $asunto, $mensaje, $headers );
+   
+}

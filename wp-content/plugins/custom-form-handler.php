@@ -176,17 +176,24 @@ function custom_form_request() {
                 wp_die('Error al insertar los datos en la base de datos');
             }
         }
+
+        session_start();
+
+        $datos = array('correo' => $_POST['email_prof_resp'], 'grupo' => $_POST['grupo'], 'alumnos' => $usuarios);
+        $prueba = $wpdb->get_row("SELECT * FROM categorias WHERE id = " . $_POST['categoria']);
+        $datos['categoria'] = $prueba->nombre;
+
         if($advertencia != ''){
             //Esto se hace para reflejar las inscripcciones erroneas que se hayan producido, se guardan en la tabla errores_inscripcion
             $error = array('grupo_id' => $grupo_id, 'error' => $advertencia);
             $wpdb->insert('errores_inscripcion', $error);
-            wp_redirect(home_url('/enviado?advertencia=' . $advertencia . '&correo=' . $_POST['email_prof_resp']));
-            //Redirigir a la página de confirmación pero con advertencia y con un tiempo de redireccion a la home del doble de tiempo
+            $datos['advertencia'] = $advertencia;        
         }
-        else
-        {
-            wp_redirect(home_url('/enviado?correo=' . $_POST['email_prof_resp'])); // Redirigir a la página de confirmación
-        }
+
+        $_SESSION['datos'] = $datos;
+
+        wp_redirect(home_url('/enviado')); // Redirigir a la página de confirmación
+
         exit;
 
 }
@@ -196,6 +203,6 @@ function redireccion_despues_de_segundos() {
     if (is_page('enviado')) {
         //Para modificar el tiempo que tarda en redireccionar, hay que cambiar el numero que pone en content
         //Tambien se puede cambiar la URL a la que redirige cambiando el valor de esc_url(home_url())
-        echo '<meta http-equiv="refresh" content="5;URL=' . esc_url(home_url()) . '" />';
+        echo '<meta http-equiv="refresh" content="6;URL=' . esc_url(home_url()) . '" />';
     }
 }

@@ -2,18 +2,26 @@
 /*
 Template Name: Plantilla Envio
 */
+session_start();
 
 function enviar_correo(){
-    $to = $_GET['correo'];
-    $subject = 'Inscripcion Olimpiada Informatica';
-    if(isset($_GET['advertencia'])){
-        $mensaje = 'La inscripcion se ha realizado con exito, pero se ha producido un error 
-        en la inscripcion de uno o varios alumnos: ' . $_GET['advertencia'] . ', 
-        por favor, contacte con el administrador para solucionarlo';
-    }else{
-        $mensaje = 'La inscripcion se ha realizado con exito';
+    $datos = $_SESSION['datos'];
+    
+    $destinatario = $datos['correo'];
+    $asunto = 'Inscripcion Olimpiada Informatica';
+    $mensaje = get_field('mensaje_correo');
+    if(isset($datos['advertencia'])){
+        $mensaje .= ', pero se ha producido un error en la inscripcion de uno o varios alumnos: 
+        ' . $datos['advertencia'] . ', por favor, contacte con el administrador para solucionarlo';
     }
-    wp_mail($to, $subject, $mensaje);
+    
+    custom_wp_mail($destinatario, $asunto, array(
+        'mensaje' => $mensaje,
+        'grupo' => $datos['grupo'],
+        'alumnos' => $datos['alumnos'],
+        'categoria' => $datos['categoria']
+    ));
+    
 }
 
 
@@ -29,14 +37,19 @@ enviar_correo();
             <br>
 
             <?php
+                $titulo = get_field('titulo');
                 $texto = get_field('texto');
+                $nota = get_field('nota');
+
             ?>
             <div>
-                <h3><?= $texto ?></h3>
-                <?php if(isset($_GET['advertencia'])): ?>
-                    <p><?= $_GET['advertencia'] ?>, por favor, contacte con el administrador para solucionarlo</p>
+                <h3><?= $titulo ?></h3>
+                <h4><?= $texto ?></h2>
+                <p><?= $nota ?></p>
+                <?php if(isset($_SESSION['datos']['advertencia'])): ?>
+                    <p><?= $_SESSION['datos']['advertencia'] ?>, por favor, contacte con el administrador para solucionarlo</p>
                 <?php endif; ?>
             </div>
 
-
+<?php session_destroy(); ?>
 <?php get_footer(); ?>
