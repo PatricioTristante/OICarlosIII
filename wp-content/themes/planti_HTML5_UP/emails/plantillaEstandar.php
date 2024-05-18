@@ -10,13 +10,14 @@
     <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4;">
         <h2 style="color: #333;"><?= $asunto ?></h2>
         <p><?= $datos_extra['mensaje'] ?></p>
-        <p>Los alumnos inscritos en el grupo <?= $datos_extra['grupo'] ?> han sido:</p>
+		<p>Los alumnos inscritos en el grupo <strong><?= $datos_extra['grupo'] ?></strong>
+			del centro <strong><?= $datos_extra['centro'] ?></strong> han sido:</p>
         <ul>
             <?php foreach($datos_extra['alumnos'] as $alumno): ?>
-                <li><?= $alumno['nombre'] ?> <?= $alumno['apellidos'] ?> identificacion: <?= $alumno['identificacion'] ?></li>
+                <li><?= $alumno['nombre'] ?> <?= $alumno['apellidos'] ?> con identificación: <?= $alumno['identificacion'] ?></li>
             <?php endforeach; ?>
         </ul>
-        <p>La categoria a la que se ha inscrito el grupo es: <?= $datos_extra['categoria'] ?></p>
+        <p>La categoría a la que se ha inscrito el grupo es: <strong><?= $datos_extra['categoria'] ?></strong>.</p>
     </div>
 
 </body>

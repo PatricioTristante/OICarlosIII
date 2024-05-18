@@ -82,23 +82,27 @@ window.onload = function() {
   });
   categoriaSelect.addEventListener('change', function() {
     campoGrupo.classList.add('oculto');
+    switch (categoriaSelect.value) {
+      case '1':
+      case '2':
+        limite = 3;
+        break;
+      case '3':
+        limite = 10;
+        break;
+      case '4':
+        limite = 7;
+        break;
+    }
     for (let i = 0; i < camposAlumnos.length; i++) {
       camposAlumnos[i].classList.add('oculto');
       camposDnis[i].classList.add('oculto');
     }
-    if(categoriaSelect.value == '4'){
-      for (let i = 0; i < camposAlumnos.length; i++) {
-        camposAlumnos[i].classList.remove('oculto');
-        camposDnis[i].classList.remove('oculto');
-      }
-      campoGrupo.classList.remove('oculto');
-    }else{
-      for (let i = 0; i < 3; i++) {
-        camposAlumnos[i].classList.remove('oculto');
-        camposDnis[i].classList.remove('oculto');
-      }
-      campoGrupo.classList.remove('oculto');
+    for (let i = 0; i < limite; i++) {
+    camposAlumnos[i].classList.remove('oculto');
+    camposDnis[i].classList.remove('oculto');
     }
+    campoGrupo.classList.remove('oculto');
   });
 }
 

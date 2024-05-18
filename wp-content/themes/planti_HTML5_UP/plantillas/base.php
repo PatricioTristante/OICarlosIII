@@ -7,18 +7,21 @@ Template Name: Plantilla base
 	require_once('wp-config.php');
 	global $wpdb;
 ?>
+<!-- FUNCIONES PERSONALIZADAS DE JAVASCRIPT -->
+<!-- Quizas no es muy correcto, pero queria evitar que diera error en las plantillas que no tiene el formulario -->
+<script src="<?= get_template_directory_uri() ?>/assets/js/custom/custom.js"></script>
 <?php get_header(); ?>
 
-<!-- Header -->
-<section id="header">
-
 			<!-- Header -->
+			<section id="header">
+
+				<!-- Header -->
 			
 				<?php
 					$menu = get_field('menu');
 				?>
 				<header>
-					<span class="image avatar"><img src="<?= get_template_directory_uri() ?>/images/centro/cifpcarlosiiiblanco.svg" alt="" /></span>
+					<span class="image avatar"><img src="<?= get_template_directory_uri() ?>/images/centro/anagramablanco.png" alt="" /></span>
 					<h1 id="logo"><a href="#"><?= $menu['titulo'] ?></a></h1>
 				</header>
 				<nav id="nav">
@@ -41,7 +44,7 @@ Template Name: Plantilla base
 				</footer>
 			</section>
 
-		<!-- Wrapper -->
+			<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Main -->
@@ -102,7 +105,13 @@ Template Name: Plantilla base
 									<form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
 										<input type="hidden" name="action" value="manejar_formulario">
 										<div class="row gtr-uniform">
-											<div class="col-12"><input type="checkbox" name="terminos" id="terminos" required><label for="terminos">Hemos leido y aceptado las bases</label></div>
+											<div class="col-12"><input type="checkbox" name="terminos" id="terminos" required><label for="terminos">Hemos leído y aceptado las bases</label>
+												<ul>
+													<li><a href="https://olimpiadas.cifpcarlos3.es/wp-content/uploads/2024/05/Bases-XV-Olimpiada-Informatica-2024.pdf">Bases de la XV Olimpiada Informática</a></li>
+													<li><a href="https://olimpiadas.cifpcarlos3.es/wp-content/uploads/2024/05/Bases-XIX-Modding-Regional-2024.pdf">Bases del XIX Modding Regional</a></li>
+													<li><a href="https://olimpiadas.cifpcarlos3.es/wp-content/uploads/2024/05/Bases-II-C3Gamer-2024.pdf">Bases del II C3Gamer</a></li>
+												</ul>
+											</div>
 											<div class="col-12">
 												<?php
 													$centros = $wpdb->get_results("SELECT * FROM centros");
@@ -110,7 +119,7 @@ Template Name: Plantilla base
 												<select name="centro" id="centro" class="js-example-basic-single" required>
 													<option value="" default>- Selecciona tu centro -</option>
 													<?php foreach($centros as $centro):?>
-														<option value="<?= $centro->id ?>"><?= $centro->dencen ?></option>
+														<option value="<?= $centro->id ?>"><?= $centro->dencen ?> (<?= $centro->loccen ?>)</option>
 													<?php endforeach; ?>
 												</select>
 											</div>
@@ -126,7 +135,7 @@ Template Name: Plantilla base
 											?>
 											<div class="col-12">
 												<select name="ciclo" id="ciclo" required>
-													<option value="" default>- Selecciona la formacion profesional del grupo/alumno -</option>
+													<option value="" default>- Selecciona la formación profesional del grupo/alumno -</option>
 													<?php foreach($ciclos as $ciclo):?>
 														<option value="<?= $ciclo->id ?>" class="<?= $ciclo->grado_id ?>"><?= $ciclo->nombre ?></option>
 													<?php endforeach; ?>
@@ -140,7 +149,7 @@ Template Name: Plantilla base
 											?>
 											<div class="col-12">
 												<select name="categoria" id="categoria" disabled required>
-													<option value="" default>- Selecciona la categoria en la que participará el grupo/alumno -</option>
+													<option value="" default>- Selecciona la categoría en la que participará el grupo/alumno -</option>
 													<?php foreach($categorias as $categoria):?>
 														<option value="<?= $categoria->id ?>"><?= $categoria->nombre ?></option>
 													<?php endforeach; ?>
@@ -150,9 +159,9 @@ Template Name: Plantilla base
 											<div class="col-12 oculto grupo">
 												<input type="text" name="grupo" id="grupo" placeholder="Nombre del grupo*" required/>
 											</div>
-											<?php for ($i=1; $i <= 7; $i++): ?>
-												<div class="col-6 col-12-xsmall oculto alumnos"><input type="text" name="nombre<?= $i ?>" id="nombre<?= $i ?>" placeholder="Nombre Alumno <?= $i == 1 ? $i . "*" : $i ?>" <?= $i == 1 ? "required" : ""?>/></div>
-												<div class="col-6 col-12-xsmall oculto dnis"><input type="text" name="dni<?= $i ?>" id="dni<?= $i ?>" placeholder="DNI Alumno <?= $i == 1 ? $i . "*" : $i ?>" <?= $i == 1 ? "required" : ""?>/></div>
+											<?php for ($i=0; $i < 10; $i++): ?>
+												<div class="col-6 col-12-xsmall oculto alumnos"><input type="text" name="nombre[<?= $i ?>]" id="nombre<?= $i ?>" placeholder="Nombre Alumno <?= $i == 0 ? $i . "*" : $i ?>" <?= $i == 0 ? "required" : ""?>/></div>
+												<div class="col-6 col-12-xsmall oculto dnis"><input type="text" name="dni[<?= $i ?>]" id="dni<?= $i ?>" placeholder="DNI Alumno <?= $i == 0 ? $i . "*" : $i ?>" <?= $i == 0 ? "required" : ""?>/></div>
 											<?php endfor; ?>
 											
 
@@ -160,7 +169,7 @@ Template Name: Plantilla base
 											
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" class="primary" value="Enviar Inscripcion" /></li>
+													<li><input type="submit" class="primary" value="Enviar Inscripción" /></li>
 													<li><input type="reset" value="Reiniciar Formulario" /></li>
 												</ul>
 											</div>

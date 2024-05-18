@@ -58,3 +58,24 @@ Description: Plantilla HTML5 UP adaptada para wordpress
 .oculto{
     display: none !important;
 }
+
+.cabeceraTabla{
+    background-color: #4472C4 !important;
+}
+
+.subcabeceraTabla{
+    background-color: #B4C6E7 !important;
+}
+
+tr, td{
+  border: 2px solid #000000;
+  border-collapse: separate;
+}
+
+.textoBlanco{
+    color: #FFFFFF;
+}
+
+.textoNegro{
+    color: #000000;
+}

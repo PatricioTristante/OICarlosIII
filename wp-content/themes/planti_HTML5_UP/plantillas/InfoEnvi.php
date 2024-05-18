@@ -8,10 +8,10 @@ function enviar_correo(){
     $datos = $_SESSION['datos'];
     
     $destinatario = $datos['correo'];
-    $asunto = 'Inscripcion Olimpiada Informatica';
+    $asunto = 'Inscripción Olimpiada Informática';
     $mensaje = get_field('mensaje_correo');
     if(isset($datos['advertencia'])){
-        $mensaje .= ', pero se ha producido un error en la inscripcion de uno o varios alumnos: 
+        $mensaje .= ', pero se ha producido un error en la inscripción de uno o varios alumnos:
         ' . $datos['advertencia'] . ', por favor, contacte con el administrador para solucionarlo';
     }
     
@@ -19,7 +19,8 @@ function enviar_correo(){
         'mensaje' => $mensaje,
         'grupo' => $datos['grupo'],
         'alumnos' => $datos['alumnos'],
-        'categoria' => $datos['categoria']
+        'categoria' => $datos['categoria'],
+		'centro' => $datos['centro']
     ));
     
 }
