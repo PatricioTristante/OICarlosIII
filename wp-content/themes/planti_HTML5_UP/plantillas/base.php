@@ -12,6 +12,7 @@ Template Name: Plantilla base
 <script src="<?= get_template_directory_uri() ?>/assets/js/custom/custom.js"></script>
 <?php get_header(); ?>
 
+
 			<!-- Header -->
 			<section id="header">
 
@@ -181,8 +182,42 @@ Template Name: Plantilla base
 
 
 						<!-- Four -->
+							<?php
+								$resultados = $wpdb->get_results("SELECT * FROM resultadosolimpiadas");
+								$contenido = get_field('bloque_resultados');
+							?>
 							<section id="four">
-								
+								<?php if($resultados): ?>
+									<div class="container">
+										<h3><?= $contenido['titulo'] ?></h3>
+										<p><?= $contenido['texto'] ?></p>
+										<div class="table-wrapper">
+											<table class="textoNegro">
+													<tr class="cabeceraTabla">
+														<th class="textoBlanco">Nombre de la prueba</th>
+														<th class="textoBlanco">Puntuación</th>
+														<th class="textoBlanco">Momento de consecución</th>
+														<th class="textoBlanco">Penalizaciones</th>
+														<th class="textoBlanco">Tiempo final</th>
+													</tr>
+												<tbody>
+													<?php foreach($resultados as $resultado): ?>
+														<tr>
+															<td colspan="5" class="subcabeceraTabla textoCentrado"><?= $resultado->grado ?> --- <?= $resultado->lastname ?> --- <?= $resultado->firstname ?></td>
+														</tr>
+														<tr>
+															<td><div class="centrar"><?= $resultado->nombrePrueba ?></div></td>
+															<td><div class="centrar"><?= $resultado->maxpuntuacion ?></div></td>
+															<td><div class="centrar"><?= $resultado->MomentoConsecución ?></div></td>
+															<td><div class="centrar"><?= $resultado->penalizaciones ?></div></td>
+															<td><div class="centrar"><?= $resultado->TiempoFinal ?></div></td>
+														</tr>
+													<?php endforeach; ?>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								<?php endif; ?>
 							</section>
 
 						<!-- Five -->
@@ -240,6 +275,5 @@ Template Name: Plantilla base
 								</div>
 							</section>
                         </div>
-
 
 <?php get_footer(); ?>
