@@ -12,4 +12,6 @@ Template Name: Plantilla test
 <p>AVISO: Pulsar este botón borrará las tablas, y luego, las volverá a crear. Haga una copia de seguridad antes de hacer esto si no quiere perder los datos</p>
 <a href="/table_seeder.php">Pulsa aquí para rellenar las tablas de datos de prueba para probar cosas</a>
 <p>AVISO: Pulsar el botón borrará todos los registros que tenga la base de datos</p>
+<a href="/tablas/edicionElegida.php">Pulsa aquí crear la tabla "edicion_elegida" y añadir el registro inicial</a>
+<p>AVISO: Pulsar el botón borrará el registro que tuviera con anterioridad</p>
 <a href="/wp-admin">Pulsa aquí para volver a wp-admin</a>
