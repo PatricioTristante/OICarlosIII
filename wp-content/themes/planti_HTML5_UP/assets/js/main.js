@@ -122,6 +122,7 @@
 				});
 
 		// Title Bar.
+			if($('#header').length != 0){
 			$titleBar = $(
 				'<div id="titleBar">' +
 					'<a href="#header" class="toggle"></a>' +
@@ -129,6 +130,7 @@
 				'</div>'
 			)
 				.appendTo($body);
+			}
 
 		// Panel.
 			$header

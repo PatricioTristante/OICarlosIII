@@ -93,3 +93,23 @@ tr, td{
 .textoCentrado{
     text-align: center !important;
 }
+
+.boton{
+    background-color: #4472C4 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: .5rem !important;
+    border-radius: 9999px !important;
+    cursor: pointer !important;
+}
+
+.activo{
+    background-color: #005eff !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+}
+
+.flex{
+    display: flex !important;
+    gap: 1rem !important;
+}

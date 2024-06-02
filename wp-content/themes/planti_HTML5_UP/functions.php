@@ -3,11 +3,10 @@
 // Se coge de la tabla ediciones, del campo edicion_11.css, el valor que corresponde a la edicion actual
 function add_CSS() {
    global $wpdb;
-   $ediciones = $wpdb->get_results("SELECT * FROM ediciones WHERE curso_escolar = '2023-2024'");
-   if(count($ediciones) == 0) {
-       return;
-   }
-   $css_file = $ediciones[0]->css_file;
+   $elegida = $wpdb->get_results("SELECT edicion_id FROM edicion_elegida")[0];
+   $ediciones = $wpdb->get_results("SELECT css_file FROM ediciones WHERE id = $elegida->edicion_id")[0];
+
+   $css_file = $ediciones->css_file;
    wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/' . $css_file);
    wp_enqueue_style( 'style2', get_template_directory_uri() . '/style.css');
 }
@@ -16,9 +15,14 @@ function add_CSS() {
 // Se coge de la tabla ediciones, del campo banner, el valor que corresponde a la edicion actual
 function add_banner() {
    global $wpdb;
-   $ediciones = $wpdb->get_results("SELECT banner FROM ediciones WHERE curso_escolar = '2023-2024'")[0];
+   $elegida = $wpdb->get_results("SELECT edicion_id FROM edicion_elegida")[0];
+   $ediciones = $wpdb->get_results("SELECT banner FROM ediciones WHERE id = $elegida->edicion_id")[0];
    $banner = $ediciones->banner;
-   return get_template_directory_uri() . '/images/banners/' . $banner;
+   if(filter_var($banner, FILTER_VALIDATE_URL)){
+         return $banner;
+   }else{
+         return get_template_directory_uri() . '/images/banners/' . $banner;
+   }
 }
 
 add_action('wp_enqueue_scripts', 'add_CSS');

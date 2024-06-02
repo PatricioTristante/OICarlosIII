@@ -14,7 +14,13 @@
    <!-- SELECT2 SCRIPT Y CSS -->
    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
+   <!-- FUNCIONES PERSONALIZADAS DE JAVASCRIPT -->
+   <?php if(is_front_page()) : ?>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/custom/custom.js"></script>
+   <?php endif; ?>
+   <?php if(is_page_template('plantillas/administracion.php')) : ?>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/custom/administracion.js"></script>
+    <?php endif; ?>
 
    <?php wp_head(); ?>
  </head>

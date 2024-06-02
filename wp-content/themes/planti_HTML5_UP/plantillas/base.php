@@ -7,9 +7,7 @@ Template Name: Plantilla base
 	require_once('wp-config.php');
 	global $wpdb;
 ?>
-<!-- FUNCIONES PERSONALIZADAS DE JAVASCRIPT -->
-<!-- Quizas no es muy correcto, pero queria evitar que diera error en las plantillas que no tiene el formulario -->
-<script src="<?= get_template_directory_uri() ?>/assets/js/custom/custom.js"></script>
+
 <?php get_header(); ?>
 
 
@@ -206,11 +204,12 @@ Template Name: Plantilla base
 															<td colspan="5" class="subcabeceraTabla textoCentrado"><?= $resultado->grado ?> --- <?= $resultado->lastname ?> --- <?= $resultado->firstname ?></td>
 														</tr>
 														<tr>
+															
 															<td><div class="centrar"><?= $resultado->nombrePrueba ?></div></td>
 															<td><div class="centrar"><?= $resultado->maxpuntuacion ?></div></td>
-															<td><div class="centrar"><?= $resultado->MomentoConsecución ?></div></td>
+															<td><div class="centrar"><?= date('H:i:s', strtotime($resultado->MomentoConsecución)) ?></div></td>
 															<td><div class="centrar"><?= $resultado->penalizaciones ?></div></td>
-															<td><div class="centrar"><?= $resultado->TiempoFinal ?></div></td>
+															<td><div class="centrar"><?= date('H:i:s', strtotime($resultado->TiempoFinal)) ?></div></td>
 														</tr>
 													<?php endforeach; ?>
 												</tbody>

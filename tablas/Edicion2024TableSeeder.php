@@ -20,8 +20,8 @@ class Edicion2024TableSeeder {
                     'fecha_celebracion' => '2024-05-15',
                     'fecha_apertura' => '2024-05-01',
                     'fecha_cierre' => '2024-05-14',
-                    'css_file' => 'edicion_11.css',
-                    'banner' => 'banner_11.jpg',
+                    'css_file' => 'styleOIC3_2024.css',
+                    'banner' => 'bannerOIC3_2024.png',
             ];
     
 
@@ -66,6 +66,15 @@ class Edicion2024TableSeeder {
 
             echo "La presente edición se ha insertado correctamente.\n";
             echo "<br>";
+
+            $elegida = $edicion['id'];
+
+            $wpdb->insert(
+                "edicion_elegida",
+                ["edicion_id" => $elegida]
+            );
+
+            echo "La edición elegida se ha insertado correctamente.\n";
         } catch (Exception $e) {
             echo "Se produjo un error al insertar la edición: " . $e->getMessage();
             echo "<br>";

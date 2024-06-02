@@ -26,7 +26,7 @@ class PatrocinadoresTableSeeder {
                     'nombre' => 'Empresa C',
                     'logotipo' => 'empresa_c.png',
                 ],
-                [
+                /* [
                     'nombre' => 'Empresa D',
                     'logotipo' => 'empresa_d.png',
                 ],
@@ -73,7 +73,7 @@ class PatrocinadoresTableSeeder {
                 [
                     'nombre' => 'Empresa O',
                     'logotipo' => 'empresa_o.png',
-                ],
+                ], */
             ];
 
                 foreach ($patrocinadores as $patrocinador) {

@@ -4,6 +4,7 @@ require_once('wp-config.php');
 require_once('wp-load.php');
 if(current_user_can('administrator')){
     $tablas = array(
+        "edicion_elegida",
         "errores_inscripcion",
         "resultados_pruebas",
         "pruebas",
@@ -16,7 +17,7 @@ if(current_user_can('administrator')){
         "patrocinadores",
         "ediciones",
         "centros",
-        "grados"
+        "grados",
     );
 
     // Ejecuta las consultas DROP TABLE IF EXISTS para eliminar las tablas existentes
@@ -160,7 +161,15 @@ if(current_user_can('administrator')){
                 error VARCHAR(255),
                 FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE CASCADE
             )
-        "
+        ",
+        "edicion_elegida" => "
+            CREATE TABLE IF NOT EXISTS edicion_elegida (
+                id BIGINT AUTO_INCREMENT,
+                PRIMARY KEY(id),
+                edicion_id BIGINT NOT NULL,
+                FOREIGN KEY (edicion_id) REFERENCES ediciones(id) ON DELETE CASCADE ON UPDATE CASCADE
+            )"
+        ,
     );
 
     // Ejecuta la consulta SQL para crear la tabla
@@ -198,4 +207,3 @@ else{
     echo "<a href='/'>Inicio</a>";
 }
 
-?>
